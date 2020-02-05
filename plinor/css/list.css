@@ -1,0 +1,62 @@
+.list_content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 55vw;
+    background: white;
+    margin-top: 2vw;
+    border-radius: 0.2vw;
+    position: relative;
+    font-size: 0.9vw;
+    font-weight: bold;
+    font-family: Proxima Nova, Arial, Helvetica Neue, sans-serif;
+    text-decoration: none;
+
+}
+
+.list_point{
+    flex-direction: row;
+    margin: 0.5vw 0.2vw;
+    width: 100%;
+    text-align: left;
+}
+
+.list_slot{
+    margin: 0;
+    float: left;
+    padding: 0.2vw 0.2vw;
+}
+
+.list_profile{
+    width: 7vw;
+    background: rgb(17, 21, 127);
+    float: right;
+    color: white;
+    border-radius: 0.2vw;
+    text-align: center;
+}
+
+.list_profile:hover{
+    color: #f4ed47;
+}
+
+
+.list_number{
+    width: 2vw;
+    margin-right: 1vw;
+    text-align: center;
+}
+
+.list_fio{
+    width: 15vw;
+}
+
+.list_status{
+
+    width: 10vw;
+}
+
+.list_mail{
+    width: 12vw;
+}
