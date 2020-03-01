@@ -52,7 +52,7 @@ class unit
         return ($hash);
     }
 
-    function generate($what,$leng){
+    public function generate($what,$leng){
         $symbols = 'abdefhiknrstyz1023456789';
         $numSymbol = strlen($symbols);
         $string = '';

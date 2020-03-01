@@ -1,12 +1,7 @@
 <?php
 use PHPUnit\Framework\TestCase;
 
-/**
- * Created by PhpStorm.
- * unit: Viktor
- * Date: 01.05.2019
- * Time: 16:31
- */
+
 
 
 class UnitTest extends TestCase
