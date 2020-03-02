@@ -1,13 +1,13 @@
-<form name="addform" method="post" action="/plinor/list/<?=$data['page']?>/save">
+<form name="addform" method="post" action="/plinor/list/<?php echo $data['page']?>/save">
 <article class="art_man">
-    <?if($data['page']!='order'):?>
+    <?php if($data['page']!='order'):?>
     <div class="add_perpult">
         <img src="/plinor/pic/orig/pencil.png" onclick="rollpol(this)">
-        <div style="margin:0;"><?if($data['page']=='user'):?>Пользователь<?else:?>Техника<?endif;?></div>
+        <div style="margin:0;"><?if($data['page']=='user'):?>Пользователь<?php else:?>Техника<?php endif;?></div>
         <img src="/plinor/pic/orig/cancel.png" onclick="deletepol(this)">
     </div>
-    <?endif;?>
-    <?switch ($data['page']):
+    <?php endif;?>
+    <?php switch ($data['page']):
     case 'tech':?>
         <div class="ent_field">
             <div class="ent_text">Инвентарный номер</div>
@@ -79,7 +79,7 @@
             </select>
         </div>
 
-    <?;break;
+    <?php ;break;
     case 'user':?>
             <div class="ent_field">
                 <div class="ent_text">Имя сотрудника</div>
@@ -112,17 +112,17 @@
                 <option value="5">Администратор</option>
             </select>
         </div>
-            <?;break;
+            <?php ;break;
             endswitch;?>
 </article>
     <div class="add_pult">
-        <?if($data['page']!='order'):?>
+        <?php if($data['page']!='order'):?>
         <div class="ent_field">
-            <input type="button" value="Добавить" class="add_button" onclick="new_form('<?=$data['page']?>')">
+            <input type="button" value="Добавить" class="add_button" onclick="new_form('<?php echo$data['page']?>')">
         </div>
         <div class="ent_field">
             <input type="submit" name="submit" value="Зарегестрировать" class="add_button">
         </div>
-        <?endif;?>
+        <?php endif;?>
     </div>
 </form>

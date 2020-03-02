@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Feb 05, 2020 at 08:27 PM
+-- Generation Time: Mar 02, 2020 at 02:47 AM
 -- Server version: 5.7.24
 -- PHP Version: 7.2.14
 
@@ -68,21 +68,33 @@ CREATE TABLE `message` (
 CREATE TABLE `oper_it` (
   `id` int(11) NOT NULL,
   `id_user` int(11) NOT NULL,
-  `id_tech` text NOT NULL,
+  `id_order` int(11) NOT NULL,
   `time_s` date NOT NULL,
-  `time_f` date NOT NULL,
-  `status` text NOT NULL,
-  `aprov` int(11) NOT NULL,
-  `tech_return` text NOT NULL
+  `time_t` date NOT NULL,
+  `aprov` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tech`
+-- Table structure for table `orders`
 --
 
-CREATE TABLE `tech` (
+CREATE TABLE `orders` (
+  `id` int(11) NOT NULL,
+  `id_tech` int(11) NOT NULL,
+  `id_order` int(11) NOT NULL,
+  `status` int(11) NOT NULL,
+  `tech_return` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `technic`
+--
+
+CREATE TABLE `technic` (
   `id` int(11) NOT NULL,
   `inv_id` text NOT NULL,
   `model_full` text NOT NULL,
@@ -99,10 +111,10 @@ CREATE TABLE `tech` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `tech`
+-- Dumping data for table `technic`
 --
 
-INSERT INTO `tech` (`id`, `inv_id`, `model_full`, `model_short`, `serial_id`, `model_opt`, `model_cond`, `stg_name`, `model_work`, `model_reserve`, `amount`, `photo_gall`, `typ`) VALUES
+INSERT INTO `technic` (`id`, `inv_id`, `model_full`, `model_short`, `serial_id`, `model_opt`, `model_cond`, `stg_name`, `model_work`, `model_reserve`, `amount`, `photo_gall`, `typ`) VALUES
 (4, 'ИН1235235', 'ПМ123456789', 'КМ123456789', 'СН123456789', 'Хорошее, я бы даже сказал классное', 'Примечаний нет', 'Кукуево ПГТ', 0, 0, 3, NULL, 3);
 
 -- --------------------------------------------------------
@@ -157,9 +169,15 @@ ALTER TABLE `oper_it`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tech`
+-- Indexes for table `orders`
 --
-ALTER TABLE `tech`
+ALTER TABLE `orders`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `technic`
+--
+ALTER TABLE `technic`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -191,9 +209,15 @@ ALTER TABLE `oper_it`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tech`
+-- AUTO_INCREMENT for table `orders`
 --
-ALTER TABLE `tech`
+ALTER TABLE `orders`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `technic`
+--
+ALTER TABLE `technic`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --

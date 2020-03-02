@@ -85,3 +85,13 @@
 .enter [value='Вход']:hover{
     color: #f4ed47;
 }
+
+.ent_atten {
+    border: 0.1vw dotted #11157f;
+    background: #fffcac;
+    padding: 0.5vw 0.5vw;
+    text-align: center;
+    font-size: 0.7vw;
+    max-width: 10vw;
+    margin-left: auto;
+}
