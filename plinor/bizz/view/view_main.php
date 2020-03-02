@@ -7,10 +7,10 @@
     <? foreach ($data['data'] as $value): ?>
         <? if ($value['status'] == 1): ?>
             <div class="soft_news_cont">
-                <a href="/plinor/article/index/<?= $value['id']; ?>">
+                <a href="/article/index/<?= $value['id']; ?>">
                     <div class="single_new">
                         <div class="single_img">
-                            <img src="/plinor/<?= $value['photo']; ?>">
+                            <img src="/<?= $value['photo']; ?>">
                         </div>
                         <div class="news_text">
 
@@ -35,10 +35,10 @@
     <? endforeach; ?>
 
     <div class="soft_news_cont">
-        <a href="/plinor/article">
+        <a href="/article">
             <div class="single_new">
                 <div class="single_img">
-                    <img src="/plinor/pic/orig/proector.png">
+                    <img src="/pic/orig/proector.png">
                 </div>
                 <div class="news_text">
                     <div class="news_tags">

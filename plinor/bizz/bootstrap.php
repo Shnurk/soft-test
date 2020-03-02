@@ -8,7 +8,7 @@ require_once 'uni_function.php';
 
 spl_autoload_register(function ($class) {
     if (!class_exists($class)) {
-        $class="bizz/model/$class.php";
+        $class="bizz/model/".strtolower($class).".php";
         if (file_exists($class))
             require_once $class;
         else {
