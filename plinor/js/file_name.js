@@ -11,3 +11,8 @@ function cross() {
     document.getElementById('cross').style.display='none';
     document.getElementById('files').value='';
 }
+
+
+function cab_vis() {
+    alert(1);
+}

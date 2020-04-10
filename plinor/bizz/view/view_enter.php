@@ -1,6 +1,6 @@
 
 <article class="enter">
-    <form method="post" action="/plinor/enter/action">
+    <form method="post" action="<?php echo URL_BASE;?>/enter/action">
         <div class="ent_field">
             <div class="ent_text">Логин</div>
             <input class="ent_ent" type="text" name="login" placeholder="Сотрудник">

@@ -5,6 +5,7 @@ article {
     padding: 0.5vw 1vw;
     display: flex;
     flex-direction: column;
+    font-family: Monc;
 }
 
 article div {
@@ -28,7 +29,6 @@ single_new a {
     height: auto;
     padding: 1vw 10vw;
     font-size: 2.5vw;
-    font-family: PF Regal, PF Regal Text Pro, Georgia, serif;
     background: white;
     text-align: center;
 }

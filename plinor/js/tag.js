@@ -73,7 +73,7 @@ function new_form(option) {
             "\n" +
             "        <div class=\"ent_field\">\n" +
             "            <div class=\"ent_text\">Количество</div>\n" +
-            "            <input class=\"ent_ent\" type=\"text\" name=\"email[]\" placeholder=\"Количество\">\n" +
+            "            <input class=\"ent_ent\" type=\"text\" name=\"amount[]\" value=\"1\" placeholder=\"Количество\">\n" +
             "        </div>\n" +
             "\n" +
             "        <div class=\"ent_field\">\n" +

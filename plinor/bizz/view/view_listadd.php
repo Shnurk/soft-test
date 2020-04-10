@@ -1,11 +1,11 @@
 <article class="list">
 <div class="biggest_soft_new">
-    <a href="/plinor/list/<?php echo$data['page']?>/list" class="list_a">
+    <a href="<?php echo URL_BASE."/list/".$data['page'];?>/list" class="list_a">
         <?php if($data['page']!="order"):?>
         Список
     </a>
     <a href="#">|</a>
-    <a href="/plinor/list/<?=$data['page']?>/add" class="list_a">
+    <a href="<?php echo URL_BASE."/list/".$data['page'];?>/add" class="list_a">
         Добавить
    <?php else:?>
    Заявки

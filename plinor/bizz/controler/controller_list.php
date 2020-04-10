@@ -9,8 +9,6 @@
 class Controller_List extends Controller
 {
     var $model_list = NULL;
-    var $table="technic";
-    var $page="tech";
     public function __construct($way)
     {
         parent::__construct($way);
@@ -18,13 +16,14 @@ class Controller_List extends Controller
     }
 
     function add_elements($table){
+        if(isset($this->way[4])){
         if($this->way[4]=='save')
-        $this->model_list->add_data($table);
+        $this->model_list->add_data($table);}
     }
 
     function action_tech(){
         $page="tech";
-        $table="tech";
+        $table="technic";
         $this->action_index($table,$page);
         $this->add_elements($table);
     }

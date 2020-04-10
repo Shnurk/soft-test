@@ -12,20 +12,11 @@ class Model_main extends Model
     {
         $cond='';
         if($tag!=0){
-            
+            $cond = "WHERE typ=" . $tag;
         }
         if ($where != 0)
             $cond = "WHERE id=" . $where;
-        else
-            $cond = $cond.'';
-        $result[0] = $this->db->query("SELECT * FROM article $cond");
-        if (isset($_COOKIE['hash'])) {
-            $hash = $_COOKIE['hash'];
-            $result[1] = $this->db->query("select login, status from users where id in (select id_user from hash where hash='$hash')");
-                if($result[1])
-                    $result[1] = mysqli_fetch_row($result[1]);
-        } else
-            $result[1] = '';
+        $result[0] = $this->db->query("SELECT * FROM technic $cond");
 
         return $result;
     }

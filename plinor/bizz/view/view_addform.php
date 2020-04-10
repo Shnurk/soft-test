@@ -11,7 +11,7 @@
     case 'tech':?>
         <div class="ent_field">
             <div class="ent_text">Инвентарный номер</div>
-            <input class="ent_ent" type="text" name="inv_id[]" placeholder="ИН">
+            <input class="ent_ent" type="text" name="iid[]" placeholder="ИН">
         </div>
         <div class="ent_field">
             <div class="ent_text">Полная модель</div>

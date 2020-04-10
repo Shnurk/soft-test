@@ -13,6 +13,6 @@ class Controller_Article extends Controller
     function action_index()
     {
         $data = $this->model_main->model_load(0,$this->way[START_POSITION + 2]);
-        $this->view->generate('view_post.php', 'view_form.php', $data);
+        $this->view->generate('view_technic.php', 'view_form.php', $data);
     }
 }
