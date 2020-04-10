@@ -23,7 +23,7 @@ body {
 
 
 .unvis{
-    visibility: hidden;
+    display: none;
 }
 
 

@@ -10,10 +10,20 @@ class Controller_Cabinet extends Controller{
     }
 
     function action_view(){
-        $data=1;
+        $data['settings']=0;
+        $data['person']=$this->model_cabinet->find_person();
         $this->view->generate('view_cabinet.php', 'view_form.php', $data);
     }
 
+    function action_change(){
+        $data['settings']=1;
+        $data['person']=$this->model_cabinet->find_person();
+        $this->view->generate('view_cabinet.php', 'view_form.php', $data);
+    }
+
+    function action_save(){
+        $this->model_cabinet->save_person();
+    }
 
     function action_index()
     {

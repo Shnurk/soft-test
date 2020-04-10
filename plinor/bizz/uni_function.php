@@ -46,7 +46,7 @@ function photo_save($img)
     $vvod['big']=0;
     $vvod['small']=0;
     $error = 0;
-    $way = '/pic/news/';
+    $way = '/pic/big/';
     if ($img['error'] != 4) {
         $pict = $img['tmp_name'];
         $pict_error = $img['error'];
@@ -136,22 +136,9 @@ function photo_save($img)
             imagecopyresampled($npict, $img, 0, 0, 0, 0, $size * $prop, $size, $place[0], $place[1]);
         }
 
-        /* if (!imagepng($npict, '.\tpl\smalpics\\' . $name . '.png')) {
-             $error = 'При записи файла на диск произошла ошибка.';
-             goto end;
-         }
-         $vvod['small'] = './tpl/smalpics/' . $name . '.png';*/
     }
-    /*else {
-        if (isset($big) && isset($smal)) {
-            $vvod['big'] = $big;
-            $vvod['small'] = $smal;
-        } else {
-            $vvod['big'] = "";
-            $vvod['small'] = "";
-        }
-    }*/
+
     end:
-    $photos = array($vvod['big'], $vvod['small'], $error);
+    $photos = array($vvod['big'], $error);
     return $photos;
 }

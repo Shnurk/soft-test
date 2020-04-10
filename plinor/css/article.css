@@ -188,25 +188,6 @@ ul {
     float: right;
     border-bottom: 0;
 }
-.file_info{
-    width: 100%;
-display: flex;
-margin: 0.5vw 0;
-padding: 0;
-flex-direction: row;
-position: relative;
-}
-.file_info li{
-    padding-right: 1vw;
-}
-.file_info #file_readonly{
-    width: 40%;
-    position: relative;
-}
-#file_desc{
-    width: 100%;
-    border: 0;
-}
 
 .artic_atten {
     margin: 0.4vw 1vw;

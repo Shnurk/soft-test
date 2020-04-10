@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Mar 02, 2020 at 02:47 AM
+-- Generation Time: Apr 10, 2020 at 09:40 PM
 -- Server version: 5.7.24
 -- PHP Version: 7.2.14
 
@@ -115,7 +115,9 @@ CREATE TABLE `technic` (
 --
 
 INSERT INTO `technic` (`id`, `inv_id`, `model_full`, `model_short`, `serial_id`, `model_opt`, `model_cond`, `stg_name`, `model_work`, `model_reserve`, `amount`, `photo_gall`, `typ`) VALUES
-(4, 'ИН1235235', 'ПМ123456789', 'КМ123456789', 'СН123456789', 'Хорошее, я бы даже сказал классное', 'Примечаний нет', 'Кукуево ПГТ', 0, 0, 3, NULL, 3);
+(4, 'ИН1235235', 'ПМ123456789', 'КМ123456789', 'СН123456789', 'Хорошее, я бы даже сказал классное', 'Примечаний нет', 'Кукуево ПГТ', 0, 0, 3, NULL, 3),
+(5, '12345', 'ПМ123456789', 'Тестовый ноут', '', '            ', '            ', '', 0, 0, 1, NULL, 1),
+(6, '1234', '', 'Классный ноут', '', '', '', '', 0, 0, 1, NULL, 1);
 
 -- --------------------------------------------------------
 
@@ -140,11 +142,18 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `login`, `password`, `r_name`, `r_surname`, `r_secname`, `email`, `mode`, `avatar`) VALUES
-(1, 'admin', 'admin', '', '', '', '', 5, ''),
+(1, 'Admin', '12345', 'Арсений', 'Бурбашиков', 'Владимирович', 'Кек', 5, '/pic/big/3d53c66529ee079e03fa8d2d3c257d05.png'),
 (2, 'moder', 'moder', '', '', '', '', 4, ''),
 (3, 'U3sryt04n23', 'Pf9itae33f1', NULL, NULL, NULL, NULL, NULL, NULL),
 (4, 'U2fh81kz288', 'P7213ityrie', 'Адольф', 'Богомолов', 'Визирионович', '1234@pepe.tel', 0, NULL),
-(6, 'Ui7r61ez230', 'Ptakestdrb0', 'Игорь', 'Хрисов', 'Визирионович', 'god@heaven.doors', 1, NULL);
+(6, 'Ui7r61ez230', 'Ptakestdrb0', 'Игорь', 'Хрисов', 'Визирионович', 'god@heaven.doors', 1, NULL),
+(7, 'Ut3yh71i0bd', 'Pksf4575zkk', 'Адольф', 'Хрисов', 'Визирионович', 'gulag@1937.us', 3, NULL),
+(8, 'Uei7sze5r74', 'Pen33f63r61', 'Адольф', 'Хрисов', 'Визирионович', 'gulag@1937.us', 3, NULL),
+(9, 'Ute64689y59', 'P28nb62754t', 'кек', 'Сталин', 'Олегович', '1234@pepe.tel', 4, NULL),
+(10, 'Uahy8s3i06y', 'Pkzb7k2ztzs', 'алибек', 'Богомолов', 'Алуийсович', 'god@heaven.doors', 4, NULL),
+(11, 'U7y59ffd8z0', 'Pi5irhe0bzi', 'Игорь', 'Сталин', 'Иосифович', 'recih@mail.ger', 5, NULL),
+(12, 'Uai956977ye', 'Pt2d0iyf21n', 'Боб', 'Хрисов', 'Визирионович', 'зузу@bebe.com', 3, NULL),
+(13, 'Ut5ydz437t7', 'Py8shezhy43', 'Адольф', 'Богомолов', 'Визирионович', '1234@pepe.tel', 5, NULL);
 
 --
 -- Indexes for dumped tables
@@ -218,13 +227,13 @@ ALTER TABLE `orders`
 -- AUTO_INCREMENT for table `technic`
 --
 ALTER TABLE `technic`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
