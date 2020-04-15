@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" href="<?php echo URL_BASE;?>/css/art_man.css">
     <link rel="stylesheet" type="text/css" href="<?php echo URL_BASE;?>/css/list.css">
     <link rel="stylesheet" type="text/css" href="<?php echo URL_BASE;?>/css/cabinet.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo URL_BASE;?>/css/mail.css">
     <link rel="shortcut icon"  href="<?php echo URL_BASE;?>/pic/web_logo/logo.ico" type="image/x-icon">
     <title>Плинор-техника</title>
 </head>

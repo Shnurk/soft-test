@@ -16,7 +16,7 @@
                 <a href="<?php echo URL_BASE;?>/main/them/4" class="nav_one">расходные материалы</a>
         </div>
         <div class="nav_setting nav_edge">
-            <?php if(isset($_COOKIE["hash"])&&($_COOKIE["hash"]!="")):?>
+            <?php if(isset($_SESSION['RULES'])&&($_SESSION['RULES']!="")):?>
                 <a href="<?php echo URL_BASE;?>/cabinet/view/" class="nav_one">кабинет</a>
                 <a href="#">|</a>
                 <a href="<?php echo URL_BASE;?>/mail" class="nav_one">почта</a>
@@ -24,7 +24,7 @@
                 <a href="<?php echo URL_BASE;?>/history" class="nav_one">история</a>
                 <a href="#">|</a>
             <?php endif;?>
-                <?php if(isset($_COOKIE["hash"])&&($_COOKIE["hash"]!="")):?>
+                <?php if(isset($_SESSION['RULES'])&&($_SESSION['RULES']!="")):?>
                     <a href="<?php echo URL_BASE;?>/enter/exit" class="nav_one">выйти</a>
                 <?php else:?>
                     <a href="<?php echo URL_BASE;?>/enter" class="nav_one">войти</a>
