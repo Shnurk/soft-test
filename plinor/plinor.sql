@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Apr 10, 2020 at 09:40 PM
+-- Generation Time: Apr 24, 2020 at 12:47 PM
 -- Server version: 5.7.24
 -- PHP Version: 7.2.14
 
@@ -55,9 +55,23 @@ CREATE TABLE `message` (
   `id_reader` int(11) NOT NULL,
   `theme` text NOT NULL,
   `content` text NOT NULL,
-  `date` date NOT NULL,
+  `mdate` int(11) NOT NULL,
   `status` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `message`
+--
+
+INSERT INTO `message` (`id`, `id_author`, `id_reader`, `theme`, `content`, `mdate`, `status`) VALUES
+(2, 1, 1, '-', ' 12345          ', 1587665712, 0),
+(3, 1, 4, '-', ' 123           ', 1587665822, 0),
+(4, 1, 4, '-', ' 24           ', 1587665824, 0),
+(5, 1, 4, '-', '  5668324          ', 1587665828, 0),
+(6, 1, 4, '-', 'Привет!            ', 1587665817, 0),
+(7, 4, 1, '-', '  Ну привет, коль не шутишь          ', 1587728727, 0),
+(8, 4, 1, '-', '   Тест идёт         ', 1587728763, 0),
+(9, 1, 12, '-', '    Поменяйте логин, а то тяжело искать.        ', 1587730457, 0);
 
 -- --------------------------------------------------------
 
@@ -142,7 +156,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `login`, `password`, `r_name`, `r_surname`, `r_secname`, `email`, `mode`, `avatar`) VALUES
-(1, 'Admin', '12345', 'Арсений', 'Бурбашиков', 'Владимирович', 'Кек', 5, '/pic/big/3d53c66529ee079e03fa8d2d3c257d05.png'),
+(1, 'Admin', '12345', 'Арсений', 'Бурбашиков1', 'Владимирович', 'Кек', 5, '0'),
 (2, 'moder', 'moder', '', '', '', '', 4, ''),
 (3, 'U3sryt04n23', 'Pf9itae33f1', NULL, NULL, NULL, NULL, NULL, NULL),
 (4, 'U2fh81kz288', 'P7213ityrie', 'Адольф', 'Богомолов', 'Визирионович', '1234@pepe.tel', 0, NULL),
@@ -209,7 +223,7 @@ ALTER TABLE `hash`
 -- AUTO_INCREMENT for table `message`
 --
 ALTER TABLE `message`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `oper_it`

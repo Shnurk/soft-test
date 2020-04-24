@@ -15,15 +15,26 @@ class Controller_mail extends Controller
         $this->model_mail = new Model_mail();
     }
 
+    function action_search(){
+        $this->model_mail->search();
+    }
+
+    function action_send(){
+
+        $man=$this->way[4];
+        $this->model_mail->save_mess($man);
+    }
+
     function action_dialog()
     {
-        $data=null;
+        $data['user']=$this->way[4];
+        $data['mess']=$this->model_mail->find_mess($data['user']);
         $this->view->generate('view_dialog.php', 'view_form.php',$data);
     }
 
     function action_index()
     {
-        $data=null;
+        $data=$this->model_mail->mess_list();
         $this->view->generate('view_mail.php', 'view_form.php',$data);
     }
 }

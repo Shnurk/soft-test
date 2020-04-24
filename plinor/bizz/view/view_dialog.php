@@ -1,91 +1,30 @@
 <article class="mail_art">
 
     <p>Сообщения</p>
+
+    <?php $flag=0;?>
+
     <div class="mail_all">
-        <hr>
-        <a href="<?php echo URL_BASE;?>/mail/dialog/какой">
-            <div class="mail_dialog">
-                <img src="<?php echo URL_BASE;?>/pic/big/f51746d1f395d3011a12b3e21faac95b.png" class="mail_photo">
-                <div>
-                    <div class="row mail_hat">
-                        <p>Иванов И.И. (@Admin)</p>
-                        <p class="mail_date">14:24 </p>
-                    </div>
-                    <p class="mail_message"> последнее сообщение</p>
+        <?php for($i=0;$i<count($data['mess'][1]);$i++):?>
+        <div class="mail_dialog  <?php if($data['mess'][0][1][0]==$data['mess'][1][$i][1]){ echo 'me'; $flag=1;} else{ $flag=0;}?>">
 
+            <img src="<?php echo URL_BASE."/".$data['mess'][0][$flag][8];?>" class="mail_photo">
+            <div>
+                <div class="row mail_hat">
+                    <p><?php echo $data['mess'][0][$flag][4]." ".mb_substr($data['mess'][0][$flag][3], 0, 1).". ".mb_substr($data['mess'][0][$flag][5], 0, 1).". (@".$data['mess'][0][$flag][1].")"?></p>
+                    <p class="mail_date"><?php echo date('H:i:s d.m.y',$data['mess'][1][$i][5]);?></p>
                 </div>
-            </div>
-        </a>
-        <hr>
-        <a href="<?php echo URL_BASE;?>/mail/dialog/какой">
-            <div class="mail_dialog">
-                <img src="<?php echo URL_BASE;?>/pic/big/f51746d1f395d3011a12b3e21faac95b.png" class="mail_photo">
-                <div>
-                    <div class="row mail_hat">
-                        <p>Сидоров И.И. (@1)</p>
-                        <p class="mail_date">14:24 </p>
-                    </div>
-                    <p class="mail_message"> последнее сообщение</p>
+                <p class="mail_message"><?php echo $data['mess'][1][$i][4];?></p>
 
-                </div>
             </div>
-        </a>
-        <hr>
-        <a href="<?php echo URL_BASE;?>/mail/dialog/какой">
-            <div class="mail_dialog">
-                <img src="<?php echo URL_BASE;?>/pic/big/f51746d1f395d3011a12b3e21faac95b.png" class="mail_photo">
-                <div>
-                    <div class="row mail_hat">
-                        <p>Петров И.И. (@2)</p>
-                        <p class="mail_date">14:24 </p>
-                    </div>
-                    <p class="mail_message"> последнее сообщение</p>
+        </div>
+        <?php endfor;?>
 
-                </div>
-            </div>
-        </a>
-        <hr>
-        <a href="<?php echo URL_BASE;?>/mail/dialog/какой">
-            <div class="mail_dialog">
-                <img src="<?php echo URL_BASE;?>/pic/big/f51746d1f395d3011a12b3e21faac95b.png" class="mail_photo">
-                <div>
-                    <div class="row mail_hat">
-                        <p>Лопухов И.И. (@3)</p>
-                        <p class="mail_date">14:24 </p>
-                    </div>
-                    <p class="mail_message"> последнее сообщение</p>
-
-                </div>
-            </div>
-        </a>
-        <hr>
-        <a href="<?php echo URL_BASE;?>/mail/dialog/какой">
-            <div class="mail_dialog">
-                <img src="<?php echo URL_BASE;?>/pic/big/f51746d1f395d3011a12b3e21faac95b.png" class="mail_photo">
-                <div>
-                    <div class="row mail_hat">
-                        <p>Лапенко И.И. (@4)</p>
-                        <p class="mail_date">14:24 </p>
-                    </div>
-                    <p class="mail_message"> последнее сообщение</p>
-
-                </div>
-            </div>
-        </a>
-        <hr>
-        <a href="<?php echo URL_BASE;?>/mail/dialog/">
-            <div class="mail_dialog">
-                <img src="<?php echo URL_BASE;?>/pic/big/f51746d1f395d3011a12b3e21faac95b.png" class="mail_photo">
-                <div>
-                    <div class="row mail_hat">
-                        <p>Покер И.И. (@5)</p>
-                        <p class="mail_date">14:24 </p>
-                    </div>
-                    <p class="mail_message"> последнее сообщение</p>
-
-                </div>
-            </div>
-        </a>
-        <hr>
+<hr>
+        <form action="<?php echo URL_BASE."/mail/send/".$data['user'];?>" method="post" name="send">
+            <textarea type="text" class="mail_ss" name="message" placeholder="Примечание">
+            </textarea>
+            <input type="submit" class="add_button mail_small" value="Отправить сообщение">
+        </form>
     </div>
 </article>

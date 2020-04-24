@@ -8,7 +8,8 @@
 
 class Model_user extends Model
 {
-    public function find_person()
+
+    function find_person()
     {
 
         $result = $this->db->query("SELECT id_user FROM hash WHERE hash='{$_COOKIE["hash"]}'");
@@ -21,6 +22,8 @@ class Model_user extends Model
             return $myresult;
         }
     }
+
+
 
     public function save_person(){
         $err[0]=0;

@@ -10,6 +10,16 @@ class Controller_Article extends Controller
         $this->model_main = new Model_main();
     }
 
+    function action_delete(){
+
+    }
+
+    function action_change(){
+
+
+    }
+
+
     function action_index()
     {
         $data = $this->model_main->model_load(0,$this->way[START_POSITION + 2]);

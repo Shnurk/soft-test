@@ -21,8 +21,8 @@
                 <a href="#">|</a>
                 <a href="<?php echo URL_BASE;?>/mail" class="nav_one">почта</a>
                 <a href="#">|</a>
-                <a href="<?php echo URL_BASE;?>/history" class="nav_one">история</a>
-                <a href="#">|</a>
+                <!--<a href="<?php echo URL_BASE;?>/history" class="nav_one">история</a>
+                <a href="#">|</a>-->
             <?php endif;?>
                 <?php if(isset($_SESSION['RULES'])&&($_SESSION['RULES']!="")):?>
                     <a href="<?php echo URL_BASE;?>/enter/exit" class="nav_one">выйти</a>
@@ -31,13 +31,13 @@
                 <?php endif;?>
         </div>
     </div>
-
+    <?php if(isset($_SESSION['RULES'])&&($_SESSION['RULES']>=4)):?>
     <div class="hot_news">
 
-        <div class="hot_value hot_grey nav_edge">
-            <?php if(isset($_SESSION['RULES'])&&($_SESSION['RULES']>=4)):?>
+       <div class="hot_value hot_grey nav_edge">
+           <!--    <?php if(isset($_SESSION['RULES'])&&($_SESSION['RULES']>=4)):?>
             <a  href="<?php echo URL_BASE;?>/list/order" class="hot_active">Заявки</a>
-            <?php endif;?>
+            <?php endif;?> -->
         </div>
         <div class="hot_jump">
 
@@ -51,4 +51,5 @@
             <?php endif;?>
         </div>
     </div>
+    <?php endif;?>
 </header>

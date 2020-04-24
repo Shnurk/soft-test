@@ -1,5 +1,7 @@
 <?php
 
+
+
 function createHash($leng)
 {
     $symbols = 'abdefhiknrstyzABDEFGHKNQRSTYZ1023456789';

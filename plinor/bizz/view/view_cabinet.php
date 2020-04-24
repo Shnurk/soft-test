@@ -67,11 +67,13 @@
         <?php endif;?>
     </div>
     </div>
-    <div>
+
+   <!-- <div>
         <p class="cab_his cab_fio">Последняя активность</p>
     <div class="cab_history">
         У вас нет ранее бронированной техники
     </div>
-    </div>
+    </div> -->
+
 </article>
 </form>

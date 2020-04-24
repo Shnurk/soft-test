@@ -58,7 +58,7 @@
 }
 
 .mail_art .mail_small{
-     width: 4vw;
+     width: 8vw;
     height: 2vw;
     margin-left: 0;
     border-radius: 0;
@@ -84,4 +84,31 @@
 .mail_art .mail_big{
     width: 12vw;
     height: 2vw;
+}
+
+.mail_art [name='send']{
+    display: flex;
+    flex-direction: row;
+    letter-spacing : -.36em;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+
+
+.mail_art [name='send'] textarea{
+    width: 70%;
+    height: 6vw;
+    resize: none;
+}
+
+.mail_art [name='send'] .mail_small{
+    width: 10vw;
+    height: 6vw;
+}
+
+.mail_art .me{
+    background: white;
 }

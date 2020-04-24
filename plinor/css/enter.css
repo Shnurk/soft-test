@@ -5,8 +5,9 @@
     flex-direction: column;
     width: 35vw;
     background: white;
-    margin-top: 10vw;
+    margin-top: 12vw;
     border-radius: 0.2vw;
+    height: 20vh;
 }
 
 .ent_field {
