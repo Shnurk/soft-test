@@ -2,9 +2,15 @@
 <article class="art_man">
     <?php if($data['page']!='order'):?>
     <div class="add_perpult">
+<<<<<<< Updated upstream
         <img src="/plinor/pic/orig/pencil.png" onclick="rollpol(this)">
         <div style="margin:0;"><?if($data['page']=='user'):?>Пользователь<?php else:?>Техника<?php endif;?></div>
         <img src="/plinor/pic/orig/cancel.png" onclick="deletepol(this)">
+=======
+        <img src="/pic/orig/pencil.png" onclick="rollpol(this)">
+        <div style="margin:0;"><?if($data['page']=='user'):?>Пользователь<?php else:?>Техника<?php endif;?></div>
+        <img src="/pic/orig/cancel.png" onclick="deletepol(this)">
+>>>>>>> Stashed changes
     </div>
     <?php endif;?>
     <?php switch ($data['page']):

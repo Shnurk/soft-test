@@ -10,7 +10,20 @@
                 <a href="/article/index/<?= $value['id']; ?>">
                     <div class="single_new">
                         <div class="single_img">
+<<<<<<< Updated upstream
                             <img src="/<?= $value['photo']; ?>">
+=======
+                            <img src="
+                            <?php
+                            switch($value['typ']){
+                                case 1: "/pic/orig/noutbook.png";break;
+                                case 2: "/pic/orig/proector.png";break;
+                                case 3: "/pic/orig/machine.png";break;
+                                case 4: "/pic/orig/marker.png";break;
+                            }
+                            ?>
+                            ">
+>>>>>>> Stashed changes
                         </div>
                         <div class="news_text">
 
