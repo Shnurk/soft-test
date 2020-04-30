@@ -13,14 +13,6 @@ class Controller_Article extends Controller
     }
 
     function action_delete(){
-<<<<<<< Updated upstream
-
-    }
-
-    function action_change(){
-
-
-=======
         $this->model_list->delete_data('technic',$this->way[START_POSITION + 2]);
     }
 
@@ -32,7 +24,6 @@ class Controller_Article extends Controller
     function action_change(){
         $data = $this->model_main->model_load(0,$this->way[START_POSITION + 2]);
         $this->view->generate('view_tech_update.php', 'view_form.php', $data);
->>>>>>> Stashed changes
     }
 
 

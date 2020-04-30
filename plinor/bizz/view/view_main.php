@@ -3,10 +3,7 @@
        Приборная панель по выбору техники и количеству
    </div>
 </article> -->
-<<<<<<< Updated upstream
-=======
 
->>>>>>> Stashed changes
 <article class="landing_main">
     <?php foreach ($data[0] as $value):?>
             <div class="soft_news_cont">
@@ -45,31 +42,5 @@
                     </div>
                 </a>
             </div>
-<<<<<<< Updated upstream
-    <? endforeach; ?>
-
-   <!-- <div class="soft_news_cont">
-        <a href="<?php echo URL_BASE;?>/article">
-            <div class="single_new">
-                <div class="single_img">
-                    <img src="<?php echo URL_BASE;?>/pic/orig/proector.png">
-                </div>
-                <div class="news_text">
-                    <div class="news_tags">
-                        Прожевальский Н.С.
-                    </div>
-                    <div class="news_name">
-                        Ноутбук HP 3000. Хорошая машина
-                    </div>
-                    <div class="news_date">
-                        20 минут назад
-                    </div>
-                </div>
-            </div>
-        </a>
-    </div> -->
-
-=======
     <?php endforeach; ?>
->>>>>>> Stashed changes
 </article>

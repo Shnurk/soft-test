@@ -58,8 +58,6 @@ class Model_list extends Model
         }
         if($table=="users"){
             header("location:".URL_BASE."/list/users");
-<<<<<<< Updated upstream
-=======
         }
 
     }
@@ -82,7 +80,6 @@ class Model_list extends Model
             $myresult = $this->db->query("UPDATE $table SET inv_id='{$all['iid']}',model_full='{$all['mf']}',model_short='{$all['ms']}',
     serial_id='{$all['sid']}', model_opt='{$all['opt']}', model_cond='{$all['cond']}', stg_name='{$all['stg']}', 
     model_work='{$all['work']}', amount='{$all['amount']}', typ='{$all['type']}' where id=$where");
->>>>>>> Stashed changes
         }
     }
 

@@ -10,9 +10,6 @@
         </div>
         <div class="cab_full row">
             <img src="<?php echo URL_BASE;?>/pic/orig/profile.png" class="cab_icon">
-<<<<<<< Updated upstream
-            <input type="text" name="mode" value="<?php echo $data['person'][7];?>" readonly>
-=======
             <?php if(($data['settings']==1)&&($data['profile'][7]>3)):?>
                 <select name="mode">
                     <option value="0" <?php if($data['person'][7]==0): echo 'selected'; endif;?>>Партнёр</option>
@@ -35,7 +32,6 @@
                 <input type="text" value="<?php echo $role?>" readonly>
                 <input type="text" class="unvis" name="mode" value="<?php echo $data['person'][7];?>" readonly>
             <?php endif;?>
->>>>>>> Stashed changes
         </div>
         <div class="cab_full row">
             <img src="<?php echo URL_BASE;?>/pic/orig/mail.png" class="cab_icon">
@@ -70,11 +66,7 @@
     </div>
     <div class="cab_settings">
         <?php if($data['settings']==0):?>
-<<<<<<< Updated upstream
-        <a href="<?php echo URL_BASE;?>/cabinet/change"><div class="cab_full row">
-=======
         <a href="<?php echo URL_BASE."/cabinet/change/".$data['person'][0]?>"><div class="cab_full row">
->>>>>>> Stashed changes
             <img src="<?php echo URL_BASE;?>/pic/orig/pencil.png" class="cab_icon">
             <p>Изменить профиль</p>
         </div>
