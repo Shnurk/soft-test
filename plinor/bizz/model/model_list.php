@@ -58,7 +58,40 @@ class Model_list extends Model
         }
         if($table=="users"){
             header("location:".URL_BASE."/list/users");
+<<<<<<< Updated upstream
+=======
         }
 
+    }
+
+    public function update_data($table,$object){
+        foreach ($_POST as $key=>$value) {
+            if($key!='submit'){
+                if(is_array($value)) {
+                    foreach ($value as $ki => $valu) {
+                        $valu[$ki] = $this->db->real_escape_string($valu[$ki]);
+                    }
+                }
+                $all[$key]=$value;}
+        }
+
+        if($object!=0)
+            $where=$object;
+
+        if($table=='technic') {
+            $myresult = $this->db->query("UPDATE $table SET inv_id='{$all['iid']}',model_full='{$all['mf']}',model_short='{$all['ms']}',
+    serial_id='{$all['sid']}', model_opt='{$all['opt']}', model_cond='{$all['cond']}', stg_name='{$all['stg']}', 
+    model_work='{$all['work']}', amount='{$all['amount']}', typ='{$all['type']}' where id=$where");
+>>>>>>> Stashed changes
+        }
+    }
+
+    public function delete_data($table,$object){
+        $myresult = $this->db->query("delete from $table where id=$object");
+        $this->db->error;
+        exit();
+        if($table=="technic"){
+            header("location:".URL_BASE."/main");
+        }
     }
 }

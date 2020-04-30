@@ -11,18 +11,39 @@ class Controller_Cabinet extends Controller{
 
     function action_view(){
         $data['settings']=0;
+<<<<<<< Updated upstream
         $data['person']=$this->model_cabinet->find_person();
+=======
+        if(isset($this->way[START_POSITION + 2]))
+            $object=$this->way[START_POSITION + 2];
+        else
+            $object=null;
+        $data['person']=$this->model_cabinet->find_person($object);
+>>>>>>> Stashed changes
         $this->view->generate('view_cabinet.php', 'view_form.php', $data);
     }
 
     function action_change(){
         $data['settings']=1;
+<<<<<<< Updated upstream
         $data['person']=$this->model_cabinet->find_person();
+=======
+        if(isset($this->way[START_POSITION + 2]))
+            $object=$this->way[START_POSITION + 2];
+        else
+            $object=null;
+        $data['profile']=$this->model_cabinet->find_person(null);
+        $data['person']=$this->model_cabinet->find_person($object);
+>>>>>>> Stashed changes
         $this->view->generate('view_cabinet.php', 'view_form.php', $data);
     }
 
     function action_save(){
+<<<<<<< Updated upstream
         $this->model_cabinet->save_person();
+=======
+        $this->model_cabinet->save_person($this->way[START_POSITION + 2]);
+>>>>>>> Stashed changes
     }
 
     function action_index()

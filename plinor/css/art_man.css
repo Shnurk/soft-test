@@ -17,7 +17,7 @@
 
 
 .art_man input {
-    font-family: Proxima Nova, Arial, Helvetica Neue, sans-serif;
+    font-family: Monc;
     font-size: 0.8vw;
     font-weight: bold;
     border: 0;
@@ -40,7 +40,7 @@
 .add_button{
     color: white;
     background: rgb(17, 21, 127);
-    font-family: Proxima Nova, Arial, Helvetica Neue, sans-serif;
+    font-family: Monc;
     font-size: 0.8vw;
     font-weight: bold;
     border: 0;
@@ -68,7 +68,7 @@
 }
 
 .add_perpult div{
-    font-family: Proxima Nova, Arial, Helvetica Neue, sans-serif;
+    font-family: Monc;
     font-size: 0.8vw;
     font-weight: bold;
 }
@@ -78,7 +78,7 @@
 }
 
 .art_man select{
-    font-family: Proxima Nova, Arial, Helvetica Neue, sans-serif;
+    font-family: Monc;
     font-weight: bold;
     border: 0;
     border-radius: 0.3vw;
@@ -88,8 +88,8 @@
     background: rgb(242, 242, 242);
     height: 2vw;
 }
-.art_man select option{
-    font-family: Proxima Nova, Arial, Helvetica Neue, sans-serif;
+.art_man option{
+    font-family: Monc, Arial;
     font-weight: bold;
     border: 0;
     border-radius: 0.3vw;

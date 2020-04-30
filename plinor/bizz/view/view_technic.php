@@ -1,4 +1,3 @@
-
 <?php foreach ($data[0] as $value):?>
 <article class="article">
     <div class="artic_visual">
@@ -47,7 +46,7 @@
             </tr>
             <tr>
                 <td>Текущее состояние:</td>
-                <td><?php echo 1;?></td>
+                <td><?php if($value['model_work']): echo "Архивное"; else: echo "Рабочее"; endif;?></td>
             </tr>
             <tr>
                 <td>Доступное количество:</td>
@@ -65,12 +64,7 @@
     <p>
     <?php echo $value['model_cond'];?>
     </p>
-    <hr>
-    <h2>История использования</h2>
-    <p>
-        <?php echo 1;?>
-    </p>
 </article>
-<?endforeach;?>
+<?php endforeach;?>
 
 

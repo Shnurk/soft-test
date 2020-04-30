@@ -3,6 +3,10 @@
        Приборная панель по выбору техники и количеству
    </div>
 </article> -->
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
 <article class="landing_main">
     <?php foreach ($data[0] as $value):?>
             <div class="soft_news_cont">
@@ -41,6 +45,7 @@
                     </div>
                 </a>
             </div>
+<<<<<<< Updated upstream
     <? endforeach; ?>
 
    <!-- <div class="soft_news_cont">
@@ -64,4 +69,7 @@
         </a>
     </div> -->
 
+=======
+    <?php endforeach; ?>
+>>>>>>> Stashed changes
 </article>

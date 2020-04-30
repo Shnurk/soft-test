@@ -3,7 +3,11 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
+<<<<<<< Updated upstream
 -- Generation Time: Apr 24, 2020 at 12:47 PM
+=======
+-- Generation Time: Apr 30, 2020 at 01:41 PM
+>>>>>>> Stashed changes
 -- Server version: 5.7.24
 -- PHP Version: 7.2.14
 
@@ -71,7 +75,12 @@ INSERT INTO `message` (`id`, `id_author`, `id_reader`, `theme`, `content`, `mdat
 (6, 1, 4, '-', 'Привет!            ', 1587665817, 0),
 (7, 4, 1, '-', '  Ну привет, коль не шутишь          ', 1587728727, 0),
 (8, 4, 1, '-', '   Тест идёт         ', 1587728763, 0),
+<<<<<<< Updated upstream
 (9, 1, 12, '-', '    Поменяйте логин, а то тяжело искать.        ', 1587730457, 0);
+=======
+(9, 1, 12, '-', '    Поменяйте логин, а то тяжело искать.        ', 1587730457, 0),
+(10, 1, 1, '-', '   Диалог с самим собой', 1587751267, 0);
+>>>>>>> Stashed changes
 
 -- --------------------------------------------------------
 
@@ -129,8 +138,12 @@ CREATE TABLE `technic` (
 --
 
 INSERT INTO `technic` (`id`, `inv_id`, `model_full`, `model_short`, `serial_id`, `model_opt`, `model_cond`, `stg_name`, `model_work`, `model_reserve`, `amount`, `photo_gall`, `typ`) VALUES
+<<<<<<< Updated upstream
 (4, 'ИН1235235', 'ПМ123456789', 'КМ123456789', 'СН123456789', 'Хорошее, я бы даже сказал классное', 'Примечаний нет', 'Кукуево ПГТ', 0, 0, 3, NULL, 3),
 (5, '12345', 'ПМ123456789', 'Тестовый ноут', '', '            ', '            ', '', 0, 0, 1, NULL, 1),
+=======
+(5, '12345', 'ПМ123456789', 'Тестовый ноут', 'СН12343234', '           Тест                                                 ', '                     Второй тест                                       ', 'ПГТ Огорёво', 0, 0, 3, NULL, 3),
+>>>>>>> Stashed changes
 (6, '1234', '', 'Классный ноут', '', '', '', '', 0, 0, 1, NULL, 1);
 
 -- --------------------------------------------------------
@@ -156,10 +169,16 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `login`, `password`, `r_name`, `r_surname`, `r_secname`, `email`, `mode`, `avatar`) VALUES
+<<<<<<< Updated upstream
 (1, 'Admin', '12345', 'Арсений', 'Бурбашиков1', 'Владимирович', 'Кек', 5, '0'),
 (2, 'moder', 'moder', '', '', '', '', 4, ''),
 (3, 'U3sryt04n23', 'Pf9itae33f1', NULL, NULL, NULL, NULL, NULL, NULL),
 (4, 'U2fh81kz288', 'P7213ityrie', 'Адольф', 'Богомолов', 'Визирионович', '1234@pepe.tel', 0, NULL),
+=======
+(1, 'admin', 'admin', 'Администратор', 'Бобинов', 'Владимирович', 'mailmailmail@mail.ma', 5, '/pic/big/640a321a71db1ca571e23300a217d5e7.png'),
+(2, 'moder', 'moder', 'Модератор', 'Голинов', 'Владимирович', 'mailmailmail@mail.ma', 4, '0'),
+(4, 'U2fh81kz288', 'P7213ityrie', 'Фридрих', 'Богомолов', 'Визирионович', '1234@pepe.tel', 1, '/pic/big/83fd5d622efe63d236408b3109fb6399.png'),
+>>>>>>> Stashed changes
 (6, 'Ui7r61ez230', 'Ptakestdrb0', 'Игорь', 'Хрисов', 'Визирионович', 'god@heaven.doors', 1, NULL),
 (7, 'Ut3yh71i0bd', 'Pksf4575zkk', 'Адольф', 'Хрисов', 'Визирионович', 'gulag@1937.us', 3, NULL),
 (8, 'Uei7sze5r74', 'Pen33f63r61', 'Адольф', 'Хрисов', 'Визирионович', 'gulag@1937.us', 3, NULL),
@@ -223,7 +242,11 @@ ALTER TABLE `hash`
 -- AUTO_INCREMENT for table `message`
 --
 ALTER TABLE `message`
+<<<<<<< Updated upstream
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+=======
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+>>>>>>> Stashed changes
 
 --
 -- AUTO_INCREMENT for table `oper_it`

@@ -208,3 +208,51 @@ ul {
     text-align: left;
 }
 
+<<<<<<< Updated upstream
+=======
+.artic_atten .artic_input{
+    background: none;
+    border: 0;
+    font-size: 0.7vw;
+    font-family: Monc;
+    font-weight: bold;
+}
+
+.artic_atten  select.artic_input{
+    width: 6vw;
+}
+
+.artic_atten option{
+    background: none;
+    border: 0;
+    font-size: 0.7vw;
+    font-family: Monc, Arial;
+    font-weight: bold;
+}
+
+.artic_top [type="image"]{
+    padding: 0 1vw;
+    height: 100%;
+    width: 2vw;
+    float: right;
+    border-bottom: 0;
+    cursor: pointer;
+}
+
+.article p{
+    width: 43vw;
+    position: relative;
+    padding: 0;
+}
+
+.article p .artic_textarea{
+    width: 95%;
+    min-height: 4vw;
+    margin: 0;
+    border: 0;
+    resize: vertical;
+    font-size: 0.8vw;
+    font-family: Monc;
+
+}
+>>>>>>> Stashed changes
