@@ -15,13 +15,13 @@
     <h1> <?php echo $value['model_short'];?></h1>
         <div>
             <?php if(isset($_SESSION['RULES'])&&($_SESSION['RULES']>=3)):?>
-        <a href="<?php echo URL_BASE;?>/article/change/<?php echo $value['id'];?>">
-            <img src="<?php echo URL_BASE;?>/pic/orig/pencil.png">
+        <a id = "icon_view" href="<?php echo URL_BASE;?>/article/change/<?php echo $value['id'];?>">
+            <i class="fas fa-edit"></i>
         </a>
             <?php endif;?>
          <?php if(isset($_SESSION['RULES'])&&($_SESSION['RULES']>=4)):?>
-            <a href="<?php echo URL_BASE;?>/article/delete/<?php echo $value['id'];?>">
-                <img src="<?php echo URL_BASE;?>/pic/orig/cancel.png">
+            <a id = "icon_view" href="<?php echo URL_BASE;?>/article/delete/<?php echo $value['id'];?>">
+                <i class="far fa-eraser"></i>
             </a>
             <?php endif;?>
         </div>
@@ -60,7 +60,7 @@
     <?php echo $value['model_opt'];?>
     </p>
     <hr>
-    <h2>Примечение</h2>
+    <h2>Примечание</h2>
     <p>
     <?php echo $value['model_cond'];?>
     </p>

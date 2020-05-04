@@ -16,11 +16,11 @@
     <h1> <?php echo $value['model_short'];?></h1>
         <div>
             <?php if(isset($_SESSION['RULES'])&&($_SESSION['RULES']>=3)):?>
-            <input type="image" src="<?php echo URL_BASE;?>/pic/orig/pencil.png">
+                <button id = "fa_buttons"><span class ="fas fa-save"></span></button>
             <?php endif;?>
          <?php if(isset($_SESSION['RULES'])&&($_SESSION['RULES']>=4)):?>
             <a href="<?php echo URL_BASE;?>/article/index/<?php echo $value['id'];?>">
-                <img src="<?php echo URL_BASE;?>/pic/orig/return.png">
+                <button id = "fa_buttons"><span class ="fas fa-arrow-circle-left"></span></button>
             </a>
             <?php endif;?>
         </div>
@@ -81,7 +81,7 @@
         </textarea>
     </p>
     <hr>
-    <h2>Примечение</h2>
+    <h2>Примечание</h2>
     <p>
         <textarea name="cond" class="artic_textarea">
     <?php echo $value['model_cond'];?>
