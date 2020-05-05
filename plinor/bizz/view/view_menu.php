@@ -1,5 +1,4 @@
 <header>
-
     <div class="nav_menu">
         <div class="nav_logo nav_edge">
             <a href="<?php echo URL_BASE;?>/main">плинор</a>

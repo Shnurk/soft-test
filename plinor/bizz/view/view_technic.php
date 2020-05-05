@@ -20,8 +20,13 @@
         </a>
             <?php endif;?>
          <?php if(isset($_SESSION['RULES'])&&($_SESSION['RULES']>=4)):?>
+<<<<<<< Updated upstream
             <a href="<?php echo URL_BASE;?>/article/delete/<?php echo $value['id'];?>">
                 <img src="<?php echo URL_BASE;?>/pic/orig/cancel.png">
+=======
+            <a onclick="return confirm('Вы уверены, что хотите удалить?');" href="<?php echo URL_BASE.'/article/delete/'.$value['id'];?>">
+                <img src="<?php echo URL_BASE;?>/pic/orig/cancel.png" >
+>>>>>>> Stashed changes
             </a>
             <?php endif;?>
         </div>

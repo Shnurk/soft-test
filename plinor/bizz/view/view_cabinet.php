@@ -1,4 +1,5 @@
 <form name="addform" method="post" action="<?php echo URL_BASE."/cabinet/save/".$data['person'][0];?>" enctype="multipart/form-data">
+
 <article>
     <div class="cab_profile row">
     <img src="<?php echo URL_BASE."/".$data['person'][8];?>" class="cab_avatar">

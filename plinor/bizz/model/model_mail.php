@@ -27,7 +27,10 @@ class Model_mail extends Model
         $searcher = $this->db->real_escape_string($_POST['search']);
         $result=$this->db->query("SELECT id from users where login='$searcher'");
         $result = mysqli_fetch_row($result);
-        header("location:".URL_BASE."/mail/dialog/".$result[0]);
+        if($result[0]!=null)
+            header("location:".URL_BASE."/mail/dialog/".$result[0]);
+        else
+            header("location:".URL_BASE."/mail/index/unf");
     }
 
        public function find_mess($man){

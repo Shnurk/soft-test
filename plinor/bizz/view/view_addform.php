@@ -1,10 +1,10 @@
-<form name="addform" method="post" action="/<?php echo URL_BASE;?>/list/<?php echo $data['page']?>/save">
+<form name="addform" method="post" action="<?php echo URL_BASE."/list/".$data['page'];?>/save">
 <article class="art_man">
     <?php if($data['page']!='order'):?>
     <div class="add_perpult">
-        <img src="/<?php echo URL_BASE;?>/pic/orig/pencil.png" onclick="rollpol(this)">
+        <img src="<?php echo URL_BASE;?>/pic/orig/pencil.png" onclick="rollpol(this)">
         <div style="margin:0;"><?if($data['page']=='user'):?>Пользователь<?php else:?>Техника<?php endif;?></div>
-        <img src="/<?php echo URL_BASE;?>/pic/orig/cancel.png" onclick="deletepol(this)">
+        <img src="<?php echo URL_BASE;?>/pic/orig/cancel.png" onclick="deletepol(this)">
     </div>
     <?php endif;?>
     <?php switch ($data['page']):
