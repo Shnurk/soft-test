@@ -57,7 +57,7 @@ class Model_list extends Model
             header("location:".URL_BASE."/list/tech");
         }
         if($table=="users"){
-            header("location:".URL_BASE."/list/users");
+            header("location:".URL_BASE."/list/user");
         }
 
     }
@@ -85,8 +85,6 @@ class Model_list extends Model
 
     public function delete_data($table,$object){
         $myresult = $this->db->query("delete from $table where id=$object");
-        $this->db->error;
-        exit();
         if($table=="technic"){
             header("location:".URL_BASE."/main");
         }

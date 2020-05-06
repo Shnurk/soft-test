@@ -34,7 +34,9 @@ class Controller_mail extends Controller
 
     function action_index()
     {
-        $data=$this->model_mail->mess_list();
+        if(isset($this->way[START_POSITION + 2]))
+            $data['error']=$this->way[START_POSITION + 2];
+        $data['list']=$this->model_mail->mess_list();
         $this->view->generate('view_mail.php', 'view_form.php',$data);
     }
 }

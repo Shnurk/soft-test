@@ -2,11 +2,13 @@
 <article class="art_man">
     <?php if($data['page']!='order'):?>
     <div class="add_perpult">
+
         <div class = "add_header" style="margin:0;"><?php if($data['page']=='user'):?>Пользователь<?php else:?>Техника<?php endif;?></div>
         <div class = "top_icons">
             <i class="fas fa-edit" onclick="rollpol(this)"></i>
             <i class="fas fa-trash-alt" onclick="deletepol(this)"></i>
         </div>
+
 
     </div>
     <?php endif;?>

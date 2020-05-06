@@ -13,17 +13,29 @@ class Controller_Article extends Controller
     }
 
     function action_delete(){
-        $this->model_list->delete_data('technic',$this->way[START_POSITION + 2]);
+        if($_SESSION['RULES']<4)
+            header("location:".URL_BASE."/404");
+        else {
+            $this->model_list->delete_data('technic', $this->way[START_POSITION + 2]);
+        }
     }
 
     function action_com_change(){
-        $this->model_list->update_data('technic',$this->way[START_POSITION + 2]);
-        $this->action_index();
+        if($_SESSION['RULES']<3)
+            header("location:".URL_BASE."/404");
+        else {
+            $this->model_list->update_data('technic', $this->way[START_POSITION + 2]);
+            $this->action_index();
+        }
     }
 
     function action_change(){
-        $data = $this->model_main->model_load(0,$this->way[START_POSITION + 2]);
-        $this->view->generate('view_tech_update.php', 'view_form.php', $data);
+        if($_SESSION['RULES']<3)
+            header("location:".URL_BASE."/404");
+        else {
+            $data = $this->model_main->model_load(0, $this->way[START_POSITION + 2]);
+            $this->view->generate('view_tech_update.php', 'view_form.php', $data);
+        }
     }
 
 
