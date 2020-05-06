@@ -36,7 +36,7 @@
 .ent_text {
     padding-bottom: 20px;
     min-width: 305px;
-    width: auto;
+    width: 305px;
     text-align: right;
 
 }
@@ -113,5 +113,13 @@
     text-align: center;
     font-size: 12px;
     width: 295px;
+}
+
+.background{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(/plinor/css/back.png);
 }
 

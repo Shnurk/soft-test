@@ -44,17 +44,17 @@ single_new a {
 }
 
 .tab_head_text{
-    width: 40vw;
+    width: 54vw;
     text-align: left;
 }
 
 .tab_head_icon{
-    width: 15vw;
-
-
-    text-align: right;
+    width: 1vw;
+    height: 45px;
+    display: flex;
+    align-items: flex-end;
+    vertical-align: bottom;
     font-size: 24px;
-
 }
 
 
