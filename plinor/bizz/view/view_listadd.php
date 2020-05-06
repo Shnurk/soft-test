@@ -1,5 +1,4 @@
 <article class="list">
-
 <div class="biggest_soft_new">
     <div class = "tab_head_text">
         <a href="<?php echo URL_BASE."/list/".$data['page'];?>/list" class="list_a">
@@ -9,7 +8,7 @@
     </div>
     <div class = "tab_head_icon">
         <a  href="<?php echo URL_BASE."/list/".$data['page'];?>/add" class="list_a">
-<!--            <i id = "plus_icon"  class="fas fa-plus-circle"></i>-->
+            <i id = "plus_icon"  class="fas fa-plus-circle"></i>
             <?php else:?>
                 Заявки
             <?php endif;?>

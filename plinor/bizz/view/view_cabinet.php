@@ -1,15 +1,16 @@
 <form name="addform" method="post" action="<?php echo URL_BASE."/cabinet/save/".$data['person'][0];?>" enctype="multipart/form-data">
+
 <article>
     <div class="cab_profile row">
     <img src="<?php echo URL_BASE."/".$data['person'][8];?>" class="cab_avatar">
     <div class="cab_info">
         <input type="text" class="cab_fio" name="r_surname" placeholder="Фамилия" value="<?php echo $data['person'][4];?>" <?php if($data['settings']==0):?>readonly<?php endif;?>>
-        <input type="text" class="cab_fio" name="r_name" placeholder="Имя" value="<?php echo $data['person'][3];?>" <?php if($data['settings']==0):?>readonly<?php endif;?>>
         <div class="cab_io">
+            <input type="text" class="cab_fio" name="r_name" placeholder="Имя" value="<?php echo $data['person'][3];?>" <?php if($data['settings']==0):?>readonly<?php endif;?>>
             <input type="text" class="cab_fio" name="r_secname" placeholder="Отчество" value="<?php echo $data['person'][5];?>" <?php if($data['settings']==0):?>readonly<?php endif;?>>
         </div>
         <div class="cab_full row">
-            <i id = "cab_icon" class="fas fa-user-alt"></i>
+            <img src="<?php echo URL_BASE;?>/pic/orig/profile.png" class="cab_icon">
             <?php if(($data['settings']==1)&&($data['profile'][7]>3)):?>
                 <select name="mode">
                     <option value="0" <?php if($data['person'][7]==0): echo 'selected'; endif;?>>Партнёр</option>
@@ -52,8 +53,7 @@
 
         <div class="cab_full row">
             <i id = "cab_icon" class="fas fa-file-upload"></i>
-
-        <label for="files" >Загрузить файл</label>
+            <label for="files" >Загрузить файл</label>
         </div>
 
         <div class="cab_full row">
@@ -73,7 +73,6 @@
         </div>
         </a>
         <div class="cab_full row">
-
             <i id = "cab_icon" class="fas fa-eye" onclick="cab_vis(this,0)"></i>
             <p class="cab_pus">Пароль</p>
             <input type="text" name="password" class="cab_puss unvis" value="<?php echo $data['person'][2];?>" <?php if($data['settings']==0):?>readonly<?php endif;?>>

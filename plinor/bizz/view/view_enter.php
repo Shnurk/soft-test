@@ -1,4 +1,8 @@
+<div class = "background">
+    <div class = "login_form">
+    <div class = "login_form">
 <article class="enter">
+
     <form method="post" action="<?php echo URL_BASE;?>/enter/action">
         <h1 class = "auth_header">Авторизация</h1>
         <div class="ent_field">
@@ -13,11 +17,13 @@
         <div class="ent_atten"><?php echo $data[1];?></div>
         <?php endif;?>
         <div class="ent_field">
-            <input type="submit" name="submit" value="Вход">
+                <input type="submit" name="submit" value="Вход">
         </div>
     </form>
-</article>
 
+</article>
+        </div>
+</div>
 
 
 

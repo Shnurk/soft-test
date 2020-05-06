@@ -1,22 +1,13 @@
-<head>
-
-</head>
-
 <header>
-
     <div class="nav_menu">
         <div class="nav_logo nav_edge">
-            <a href="<?php echo URL_BASE;?>/main">Плинор</a>
+            <a href="<?php echo URL_BASE;?>/main">плинор</a>
         </div>
         <div class="nav_tag">
                 <a href="<?php echo URL_BASE;?>/main" class="nav_one main">техника</a>
-<!--                <a href="#">|</a>-->
                 <a href="<?php echo URL_BASE;?>/main/them/1" class="nav_one">ноутбуки</a>
-<!--                <a href="#">|</a>-->
                 <a href="<?php echo URL_BASE;?>/main/them/2" class="nav_one">проекторы</a>
-<!--                <a href="#">|</a>-->
                 <a href="<?php echo URL_BASE;?>/main/them/3" class="nav_one">измерительная техника</a>
-<!--                <a href="#">|</a>-->
                 <a href="<?php echo URL_BASE;?>/main/them/4" class="nav_one">расходные материалы</a>
         </div>
         <div class="nav_setting nav_edge">
@@ -24,11 +15,9 @@
                 <a href="<?php echo URL_BASE;?>/cabinet/view/" class="nav_one">
                     <i class="fas fa-user"></i>
                 </a>
-
                 <a href="<?php echo URL_BASE;?>/mail" class="nav_one">
                     <i class="fas fa-envelope"></i>
                 </a>
-
                 <!--<a href="<?php echo URL_BASE;?>/history" class="nav_one">история</a>
                 <a href="#">|</a>-->
             <?php endif;?>
@@ -38,7 +27,8 @@
                     </a>
                 <?php else:?>
                     <a href="<?php echo URL_BASE;?>/enter" class="nav_one">
-                        <i class="fas fa-sign-in-alt"></i></a>
+                        <i class="fas fa-sign-in-alt"></i>
+                    </a>
                 <?php endif;?>
         </div>
     </div>
