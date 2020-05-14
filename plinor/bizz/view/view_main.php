@@ -16,10 +16,17 @@
                             <img src="
                             <?php
                             switch($value['typ']){
+<<<<<<< Updated upstream
                                 case 1: "/pic/orig/noutbook.png";break;
                                 case 2: "/pic/orig/proector.png";break;
                                 case 3: "/pic/orig/machine.png";break;
                                 case 4: "/pic/orig/marker.png";break;
+=======
+                                case 1: echo "/pic/orig/noutbook.png";break;
+                                case 2: echo "/pic/orig/proector.png";break;
+                                case 3: echo "/pic/orig/machine.png";break;
+                                case 4: echo "/pic/orig/marker.png";break;
+>>>>>>> Stashed changes
                             }
                             ?>
                             ">
