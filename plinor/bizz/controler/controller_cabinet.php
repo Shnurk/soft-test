@@ -11,7 +11,7 @@ class Controller_Cabinet extends Controller{
 
     function action_view(){
         $data['settings']=0;
-        if(isset($this->way[START_POSITION + 2])&&($_SESSION['RULES']<3))
+        if(isset($this->way[START_POSITION + 2])&&($_SESSION['RULES']>=3))
             $object=$this->way[START_POSITION + 2];
         else
             $object=null;
@@ -21,7 +21,7 @@ class Controller_Cabinet extends Controller{
 
     function action_change(){
         $data['settings']=1;
-        if(isset($this->way[START_POSITION + 2])&&($_SESSION['RULES']<3))
+        if(isset($this->way[START_POSITION + 2])&&($_SESSION['RULES']>=4))
             $object=$this->way[START_POSITION + 2];
         else
             $object=null;

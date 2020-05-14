@@ -23,8 +23,9 @@ class Controller_List extends Controller
     }
 
     function action_tech(){
-        if($_SESSION['RULES']<4)
+        if($_SESSION['RULES']<4){
             header("location:".URL_BASE."/404");
+      }
         else{
         $page="tech";
         $table="technic";

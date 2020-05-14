@@ -5,14 +5,14 @@
     flex-direction: column;
     width: 55vw;
     background: white;
-    margin-top: 2vw;
+    margin-top: 0vw;
     border-radius: 0.2vw;
     position: relative;
-    font-size: 0.9vw;
+    font-size: 16px;
     font-weight: bold;
-    font-family: Proxima Nova, Arial, Helvetica Neue, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", serif;
     text-decoration: none;
-
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
 }
 
 .list_point{
@@ -30,7 +30,7 @@
 
 .list_profile{
     width: 7vw;
-    background: rgb(17, 21, 127);
+    background: #2574A9;
     float: right;
     color: white;
     border-radius: 0.2vw;
@@ -38,7 +38,7 @@
 }
 
 .list_profile:hover{
-    color: #f4ed47;
+    background-color: #11157f;
 }
 
 

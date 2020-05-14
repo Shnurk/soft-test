@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Apr 30, 2020 at 01:41 PM
+-- Generation Time: May 14, 2020 at 02:06 PM
 -- Server version: 5.7.24
 -- PHP Version: 7.2.14
 
@@ -72,36 +72,8 @@ INSERT INTO `message` (`id`, `id_author`, `id_reader`, `theme`, `content`, `mdat
 (7, 4, 1, '-', '  Ну привет, коль не шутишь          ', 1587728727, 0),
 (8, 4, 1, '-', '   Тест идёт         ', 1587728763, 0),
 (9, 1, 12, '-', '    Поменяйте логин, а то тяжело искать.        ', 1587730457, 0),
-(10, 1, 1, '-', '   Диалог с самим собой', 1587751267, 0);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `oper_it`
---
-
-CREATE TABLE `oper_it` (
-  `id` int(11) NOT NULL,
-  `id_user` int(11) NOT NULL,
-  `id_order` int(11) NOT NULL,
-  `time_s` date NOT NULL,
-  `time_t` date NOT NULL,
-  `aprov` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `orders`
---
-
-CREATE TABLE `orders` (
-  `id` int(11) NOT NULL,
-  `id_tech` int(11) NOT NULL,
-  `id_order` int(11) NOT NULL,
-  `status` int(11) NOT NULL,
-  `tech_return` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+(10, 1, 1, '-', '   Диалог с самим собой', 1587751267, 0),
+(11, 1, 4, '-', '          Тест продолжается  ', 1589459411, 0);
 
 -- --------------------------------------------------------
 
@@ -130,8 +102,8 @@ CREATE TABLE `technic` (
 --
 
 INSERT INTO `technic` (`id`, `inv_id`, `model_full`, `model_short`, `serial_id`, `model_opt`, `model_cond`, `stg_name`, `model_work`, `model_reserve`, `amount`, `photo_gall`, `typ`) VALUES
-(5, '12345', 'ПМ123456789', 'Тестовый ноут', 'СН12343234', '           Тест                                                 ', '                     Второй тест                                       ', 'ПГТ Огорёво', 0, 0, 3, NULL, 3),
-(6, '1234', '', 'Классный ноут', '', '', '', '', 0, 0, 1, NULL, 1);
+(7, 'ИН 6345974', 'ПМ 23435', 'КМ 243243', 'СН 1789473', 'Приемлимое, работать можно.            ', 'Это тестовая запись.            ', 'Бибирево ПГТ', 0, 0, 1, NULL, 2),
+(8, 'ИН 6345974', 'HP Spectre x360', 'HP Spectre', 'СН 128324945', ' Только куплен           ', 'Можно использовать, но сначала вынуть из коробки            ', 'Кукуево ПГТ', 0, 0, 1, NULL, 1);
 
 -- --------------------------------------------------------
 
@@ -166,7 +138,11 @@ INSERT INTO `users` (`id`, `login`, `password`, `r_name`, `r_surname`, `r_secnam
 (10, 'Uahy8s3i06y', 'Pkzb7k2ztzs', 'алибек', 'Богомолов', 'Алуийсович', 'god@heaven.doors', 4, NULL),
 (11, 'U7y59ffd8z0', 'Pi5irhe0bzi', 'Игорь', 'Сталин', 'Иосифович', 'recih@mail.ger', 5, NULL),
 (12, 'Uai956977ye', 'Pt2d0iyf21n', 'Боб', 'Хрисов', 'Визирионович', 'зузу@bebe.com', 3, NULL),
-(13, 'Ut5ydz437t7', 'Py8shezhy43', 'Адольф', 'Богомолов', 'Визирионович', '1234@pepe.tel', 5, NULL);
+(13, 'Ut5ydz437t7', 'Py8shezhy43', 'Адольф', 'Богомолов', 'Визирионович', '1234@pepe.tel', 5, NULL),
+(14, 'Ukz9dsk7e32', 'P2z12hr0art', 'Ден', 'Смолихин', 'Елесеев', '1234@pepe.tel', 1, NULL),
+(15, 'Uyt58y04ksb', 'Pt76k7425nb', 'Ден', 'Смолихин', 'Елесеев', '1234@pepe.tel', 1, NULL),
+(16, 'U9nfshd8tr2', 'P2ayezzbinb', '', '', '', '', 0, NULL),
+(17, 'U58566a3t69', 'P7y522zn7e6', 'Игорь', 'Диллан', 'Джон', 'зузу@bebe.com', 2, NULL);
 
 --
 -- Indexes for dumped tables
@@ -182,18 +158,6 @@ ALTER TABLE `hash`
 -- Indexes for table `message`
 --
 ALTER TABLE `message`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `oper_it`
---
-ALTER TABLE `oper_it`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `orders`
---
-ALTER TABLE `orders`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -222,31 +186,19 @@ ALTER TABLE `hash`
 -- AUTO_INCREMENT for table `message`
 --
 ALTER TABLE `message`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
-
---
--- AUTO_INCREMENT for table `oper_it`
---
-ALTER TABLE `oper_it`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `orders`
---
-ALTER TABLE `orders`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `technic`
 --
 ALTER TABLE `technic`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

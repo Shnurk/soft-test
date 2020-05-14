@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="<?php echo URL_BASE;?>/css/cabinet.css">
     <link rel="stylesheet" type="text/css" href="<?php echo URL_BASE;?>/css/mail.css">
     <link rel="shortcut icon"  href="<?php echo URL_BASE;?>/pic/web_logo/logo.ico" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/3c32a2ea49.js" crossorigin="anonymous"></script>
     <title>Плинор-техника</title>
 </head>
 <body>
