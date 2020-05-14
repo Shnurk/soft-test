@@ -35,25 +35,25 @@
             <?php endif;?>
         </div>
         <div class="cab_full row">
-            <img src="<?php echo URL_BASE;?>/pic/orig/mail.png" class="cab_icon">
+            <i id = "cab_icon" class="fas fa-envelope"></i>
             <input type="text" name="mail" value="<?php echo $data['person'][6];?>" <?php if($data['settings']==0):?>readonly<?php endif;?>>
         </div>
         <div class="cab_full row">
-            <img src="<?php echo URL_BASE;?>/pic/orig/atsign.png" class="cab_icon">
+            <i id = "cab_icon" class="fas fa-at"></i>
             <input type="text" name="login" value="<?php echo $data['person'][1];?>" <?php if($data['settings']==0):?>readonly<?php endif;?>>
         </div>
 
         <?php if($data['settings']!=0):?>
 
             <div class="cab_full row">
-                <img src="<?php echo URL_BASE;?>/pic/orig/eye.png" class="cab_icon eye" onclick="cab_vis(this,1)">
+                <i id = "cab_icon" class="fas fa-eye" onclick="cab_vis(this,1)"></i>
                 <p class="cab_pus">Пароль</p>
                 <input type="text" name="password" class="cab_puss unvis" value="<?php echo $data['person'][2];?>" <?php if($data['settings']==0):?>readonly<?php endif;?>>
             </div>
 
         <div class="cab_full row">
-        <img src="<?php echo URL_BASE;?>/pic/orig/arrow.png" class="cab_icon">
-        <label for="files" >Загрузить файл</label>
+            <i id = "cab_icon" class="fas fa-file-upload"></i>
+            <label for="files" >Загрузить файл</label>
         </div>
 
         <div class="cab_full row">
@@ -68,22 +68,22 @@
     <div class="cab_settings">
         <?php if($data['settings']==0):?>
         <a href="<?php echo URL_BASE."/cabinet/change/".$data['person'][0]?>"><div class="cab_full row">
-            <img src="<?php echo URL_BASE;?>/pic/orig/pencil.png" class="cab_icon">
+                <i id = "cab_icon" class="fas fa-user-edit"></i>
             <p>Изменить профиль</p>
         </div>
         </a>
         <div class="cab_full row">
-            <img src="<?php echo URL_BASE;?>/pic/orig/eye.png" class="cab_icon eye" onclick="cab_vis(this,0)">
+            <i id = "cab_icon" class="fas fa-eye" onclick="cab_vis(this,0)"></i>
             <p class="cab_pus">Пароль</p>
             <input type="text" name="password" class="cab_puss unvis" value="<?php echo $data['person'][2];?>" <?php if($data['settings']==0):?>readonly<?php endif;?>>
         </div>
         <?php else:?>
         <div class="cab_full row">
-            <img src="<?php echo URL_BASE;?>/pic/orig/pencil.png" class="cab_icon">
+            <i id = "cab_icon" class="fas fa-save"></i>
             <input type="submit" name="submit" value="Сохранить изменения">
         </div>
         <a href="<?php echo URL_BASE;?>/cabinet/view"><div class="cab_full row">
-            <img src="<?php echo URL_BASE;?>/pic/orig/cancel.png" class="cab_icon">
+                <i id = "cab_icon" class="fas fa-arrow-alt-circle-left"></i>
             <p>Отмена</p>
             </div></a>
         <?php endif;?>
