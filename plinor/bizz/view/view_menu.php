@@ -4,11 +4,13 @@
             <a href="<?php echo URL_BASE;?>/main">плинор</a>
         </div>
         <div class="nav_tag">
+
                 <a href="<?php echo URL_BASE;?>/main" class="nav_one <?php if($data['them']==null): echo "main"; endif;?>">техника</a>
                 <a href="<?php echo URL_BASE;?>/main/them/1" class="nav_one <?php if($data['them']==1): echo "main"; endif;?>">ноутбуки</a>
                 <a href="<?php echo URL_BASE;?>/main/them/2" class="nav_one <?php if($data['them']==2): echo "main"; endif;?>">проекторы</a>
                 <a href="<?php echo URL_BASE;?>/main/them/3" class="nav_one <?php if($data['them']==3): echo "main"; endif;?>">измерительная техника</a>
                 <a href="<?php echo URL_BASE;?>/main/them/4" class="nav_one <?php if($data['them']==4): echo "main"; endif;?>">расходные материалы</a>
+
         </div>
         <div class="nav_setting nav_edge">
             <?php if(isset($_SESSION['RULES'])&&($_SESSION['RULES']!="")):?>
