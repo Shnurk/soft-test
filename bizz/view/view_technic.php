@@ -1,4 +1,3 @@
-
 <?php foreach ($data[0] as $value):?>
 <article class="article">
     <div class="artic_visual">
@@ -15,19 +14,14 @@
     <div class="artic_top">
     <h1> <?php echo $value['model_short'];?></h1>
         <div>
-            <?php if(isset($_SESSION['RULES'])&&($_SESSION['RULES']>=3)):?>
+            <?php if(isset($_SESSION['RULES'])&&($_SESSION['RULES']>=4)):?>
         <a href="<?php echo URL_BASE;?>/article/change/<?php echo $value['id'];?>">
             <img src="/pic/orig/pencil.png">
         </a>
             <?php endif;?>
          <?php if(isset($_SESSION['RULES'])&&($_SESSION['RULES']>=4)):?>
-<<<<<<< Updated upstream
-            <a href="<?php echo URL_BASE;?>/article/delete/<?php echo $value['id'];?>">
-                <img src="/pic/orig/cancel.png">
-=======
             <a onclick="return confirm('Вы уверены, что хотите удалить?');" href="<?php echo URL_BASE.'/article/delete/'.$value['id'];?>">
                 <img src="/pic/orig/cancel.png" >
->>>>>>> Stashed changes
             </a>
             <?php endif;?>
         </div>
@@ -52,7 +46,7 @@
             </tr>
             <tr>
                 <td>Текущее состояние:</td>
-                <td><?php echo 1;?></td>
+                <td><?php if($value['model_work']): echo "Архивное"; else: echo "Рабочее"; endif;?></td>
             </tr>
             <tr>
                 <td>Доступное количество:</td>
@@ -70,12 +64,7 @@
     <p>
     <?php echo $value['model_cond'];?>
     </p>
-    <hr>
-    <h2>История использования</h2>
-    <p>
-        <?php echo 1;?>
-    </p>
 </article>
-<?endforeach;?>
+<?php endforeach;?>
 
 

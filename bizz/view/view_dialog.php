@@ -22,7 +22,7 @@
 
 <hr>
         <form action="<?php echo URL_BASE."/mail/send/".$data['user'];?>" method="post" name="send">
-            <textarea type="text" class="mail_ss" name="message" placeholder="Примечание">
+            <textarea type="text" class="mail_ss" name="message" placeholder="Сообщение">
             </textarea>
             <input type="submit" class="add_button mail_small" value="Отправить сообщение">
         </form>

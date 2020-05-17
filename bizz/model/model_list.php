@@ -25,16 +25,19 @@ class Model_list extends Model
         $counter=0;
         foreach ($_POST as $key=>$value) {
             if($key!='submit'){
-                foreach ($value as $ki=>$valu){
-                    $valu[$ki]=$this->db->real_escape_string($valu[$ki]);
+                if(is_array($value)) {
+                    foreach ($value as $ki => $valu) {
+                        $valu[$ki] = $this->db->real_escape_string($valu[$ki]);
+                    }
                 }
                 $all[$key]=$value;}
         }
         foreach ($all as $key=>$value) {
             if($key!='submit'){
+                if(is_array($value)){
                 foreach ($value as $ki=>$valu){
                     $valu[$ki]=htmlspecialchars($valu[$ki]);
-                }
+                }}
                 $counter=count($all[$key]);
                 $all[$key]=$value;}
         }
@@ -45,18 +48,45 @@ class Model_list extends Model
                 $result = $this->db->query("INSERT INTO $table(login,password,r_name,r_surname,r_secname,email,mode) 
             VALUES('$log','$pass','{$all['r_name'][$i]}','{$all['r_surname'][$i]}','{$all['r_secname'][$i]}','{$all['email'][$i]}','{$all['type'][$i]}')");
             }
-            if($table=="tech"){
+            if($table=="technic"){
                 $result = $this->db->query("INSERT INTO $table(inv_id,model_full,model_short,serial_id,model_opt,model_cond,stg_name,model_work,model_reserve,amount,typ)
-           VALUES('{$all['inv_id'][$i]}','{$all['md'][$i]}','{$all['cm'][$i]}','{$all['sid'][$i]}',
-           '{$all['cond'][$i]}','{$all['opt'][$i]}','{$all['storage'][$i]}','{$all['work'][$i]}','{$all['reserve'][$i]}','{$all['amount'][$i]}','{$all['type'][$i]}')");
-            }
+           VALUES('{$all['iid'][$i]}','{$all['md'][$i]}','{$all['cm'][$i]}','{$all['sid'][$i]}','{$all['cond'][$i]}','{$all['opt'][$i]}','{$all['storage'][$i]}','{$all['work'][$i]}','{$all['reserve'][$i]}','{$all['amount'][$i]}','{$all['type'][$i]}')");
+             }
         }
-        if($table=="tech"){
-            header("location:/plinor/list/tech");
+        if($table=="technic"){
+            header("location:".URL_BASE."/list/tech");
         }
         if($table=="users"){
-            header("location:/plinor/list/users");
+            header("location:".URL_BASE."/list/user");
         }
 
+    }
+
+    public function update_data($table,$object){
+        foreach ($_POST as $key=>$value) {
+            if($key!='submit'){
+                if(is_array($value)) {
+                    foreach ($value as $ki => $valu) {
+                        $valu[$ki] = $this->db->real_escape_string($valu[$ki]);
+                    }
+                }
+                $all[$key]=$value;}
+        }
+
+        if($object!=0)
+            $where=$object;
+
+        if($table=='technic') {
+            $myresult = $this->db->query("UPDATE $table SET inv_id='{$all['iid']}',model_full='{$all['mf']}',model_short='{$all['ms']}',
+    serial_id='{$all['sid']}', model_opt='{$all['opt']}', model_cond='{$all['cond']}', stg_name='{$all['stg']}', 
+    model_work='{$all['work']}', amount='{$all['amount']}', typ='{$all['type']}' where id=$where");
+        }
+    }
+
+    public function delete_data($table,$object){
+        $myresult = $this->db->query("delete from $table where id=$object");
+        if($table=="technic"){
+            header("location:".URL_BASE."/main");
+        }
     }
 }

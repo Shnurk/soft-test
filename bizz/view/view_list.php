@@ -34,12 +34,6 @@
                     case 1: echo "Архивный";break;
                 }
                 ?></div>
-            <div class="list_reserve list_slot"><?php
-                switch($value[9]){
-                    case 0: echo "Доступен";break;
-                    case 1: echo "Недоступен";break;
-                }
-                ?></div>
             <div class="list_status list_slot"><?php
                 switch($value[12]){
                     case 1: echo "Ноутбук";break;
@@ -48,7 +42,7 @@
                     case 4: echo "Расходный материал";break;
                 }
                 ?></div>
-            <a href="/plinor/cabinet/view/<?php echo$value[0]?>"><div class="list_slot list_profile">Профиль</div></a>
+            <a href="<?php echo URL_BASE;?>/article/index/<?php echo $value[0]; ?>"><div class="list_slot list_profile">Профиль</div></a>
         </div>
     <?php else:?>
     <?php

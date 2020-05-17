@@ -1,24 +1,41 @@
 .art_man{
+    margin-top: 0px;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
     display: flex;
     align-items: center;
+    align-content: flex-start;
     justify-content: center;
     flex-direction: column;
-    width: 35vw;
+    width: 55vw;
     background: white;
-    margin-top: 2vw;
     border-radius: 0.2vw;
     position: relative;
 }
 
-.art_man .ent_text {
-    width: auto;
-    text-align: right;
-    padding-right: 0.4vw;
+.ent_text{
+    text-align: left;
+    width: 300px;
+}
+.add_header{
+    font-size: 32px;
 }
 
+.list_a:hover{
+    color: #2574A9;
+}
+
+.top_icons i{
+    color: #2574A9;
+    font-size: 20px;
+    padding: 4px;
+}
+
+.top_icons i:hover{
+    color: #11157f;
+}
 
 .art_man input {
-    font-family: Proxima Nova, Arial, Helvetica Neue, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", serif;
     font-size: 0.8vw;
     font-weight: bold;
     border: 0;
@@ -26,9 +43,10 @@
 }
 
 .art_man [type='text'],.art_man [type='number'] {
+    font-weight: 500;
     padding-left: 0.4vw;
-    width: 7vw;
-    font-size: 0.6vw;
+    width: 150px;
+    font-size: 14px;
     background: rgb(242, 242, 242);
 }
 
@@ -40,19 +58,19 @@
 
 .add_button{
     color: white;
-    background: rgb(17, 21, 127);
-    font-family: Proxima Nova, Arial, Helvetica Neue, sans-serif;
-    font-size: 0.8vw;
-    font-weight: bold;
+    background: #2574A9;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", serif;
+    font-size: 16px;
+    font-weight: 500;
     border: 0;
-    border-radius: 0.3vw;
-    width: 8vw;
-    height: 1.7vw;
+    border-radius: 4px;
+    width: 200px;
+    height: 32px;
     margin: 0 1vw;
 }
 
 .add_button:hover{
-   color: #f4ed47;
+   background: #11157f;
 }
 
 .add_perpult{
@@ -63,14 +81,10 @@
     align-items: center;
 }
 
-.add_perpult img{
-    width: 1.5vw;
-    height: 1.5vw;
-}
-
 .add_perpult div{
-    font-family: Proxima Nova, Arial, Helvetica Neue, sans-serif;
-    font-size: 0.8vw;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", serif;
+    font-size: 20px;
+    padding-right: 8px;
     font-weight: bold;
 }
 
@@ -79,18 +93,18 @@
 }
 
 .art_man select{
-    font-family: Proxima Nova, Arial, Helvetica Neue, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", serif;
     font-weight: bold;
     border: 0;
     border-radius: 0.3vw;
     padding-left: 0.4vw;
-    width: 7.5vw;
+    width: 150px;
     font-size: 0.6vw;
     background: rgb(242, 242, 242);
-    height: 2vw;
+    height: 32px;
 }
-.art_man select option{
-    font-family: Proxima Nova, Arial, Helvetica Neue, sans-serif;
+.art_man option{
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", serif;
     font-weight: bold;
     border: 0;
     border-radius: 0.3vw;
@@ -101,7 +115,16 @@
 }
 
 .art_man textarea{
-    width: 12vw;
-    height: 3vw;
+    border-color: #d0d0d0;
+    border-radius: 2px;
+    width: 150px;
+    height: 32px;
     resize: none;
 }
+
+.add_header{
+    width: 50vw;
+    margin: 0;
+}
+
+

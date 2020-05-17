@@ -1,10 +1,19 @@
+html{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
 article {
     margin: 0 auto;
+    margin-top: 70px;
     position: relative;
     width: 65vw;
     padding: 0.5vw 1vw;
     display: flex;
     flex-direction: column;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", serif;
+    height: 100%;
 }
 
 article div {
@@ -23,34 +32,47 @@ single_new a {
 }
 
 .biggest_soft_new {
-    border: 0.3vw solid rgb(17, 21, 127);
-    width: 44.5vw;
-    height: auto;
-    padding: 1vw 10vw;
+
+    width: 55vw;
+    height: 60px;
+    vertical-align: baseline;
+    padding: 1vw 5vw;
     font-size: 2.5vw;
-    font-family: PF Regal, PF Regal Text Pro, Georgia, serif;
-    background: white;
-    text-align: center;
+    display: flex;
+    flex-direction: row;
+
 }
+
+.tab_head_text{
+    width: 54vw;
+    text-align: left;
+}
+
+.tab_head_icon{
+    width: 1vw;
+    height: 45px;
+    display: flex;
+    align-items: flex-end;
+    vertical-align: bottom;
+    font-size: 24px;
+}
+
 
 .soft_news_cont {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
     justify-items: center;
-
 }
 
 .single_new {
+    border-radius: 6px;
     width: 20vw;
     height: auto;
     position: relative;
-    border: 1.5px solid rgba(0, 0, 0, .15);
-    border-radius: 0.5px;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
     background: white;
     margin-top: 0;
-
 }
 
 .single_img {
@@ -75,6 +97,7 @@ single_new a {
 }
 
 a {
+    font-weight: 700;
     text-decoration: none;
     color: black;
 }
@@ -84,22 +107,29 @@ a {
 }
 
 .news_tags {
-    border: 1px solid rgb(17, 21, 127);
-    color: rgb(17, 21, 127);
-    padding: 0 0.1vw;
-    font-weight: bold;
-    font-size: 0.7vw;
+    background-color: #2574A9;
+    border-radius: 20px;
+    color: white;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 12px;
+    padding-right: 12px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", serif;
+    font-weight: 500;
+    font-size: 9pt;
     display: inline-block;
 }
 
 .news_name {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", serif;
     margin-top: 1vw;
-    font-weight: bold;
+    font-weight: 600;
     font-size: 1.1vw;
     height: 2vw;
 }
 
 .news_date {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", serif;
     font-size: 0.7vw;
     color: darkgray;
     margin-top: 1.5vw;

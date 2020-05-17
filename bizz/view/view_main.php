@@ -1,78 +1,46 @@
-<article>
-    <div class="biggest_soft_new">
-        Приборная панель по выбору техники и количеству
-    </div>
-</article>
+<!-- <article>
+  <!-- <div class="biggest_soft_new">
+       Приборная панель по выбору техники и количеству
+   </div>
+</article> -->
+
 <article class="landing_main">
-    <? foreach ($data['data'] as $value): ?>
-        <? if ($value['status'] == 1): ?>
+    <?php foreach ($data[0] as $value):?>
             <div class="soft_news_cont">
-                <a href="/article/index/<?= $value['id']; ?>">
+                <a href="<?php echo URL_BASE;?>/article/index/<?php echo $value['id']; ?>">
                     <div class="single_new">
                         <div class="single_img">
-<<<<<<< Updated upstream
-                            <img src="/<?= $value['photo']; ?>">
-=======
                             <img src="
                             <?php
                             switch($value['typ']){
-<<<<<<< Updated upstream
-                                case 1: "/pic/orig/noutbook.png";break;
-                                case 2: "/pic/orig/proector.png";break;
-                                case 3: "/pic/orig/machine.png";break;
-                                case 4: "/pic/orig/marker.png";break;
-=======
                                 case 1: echo "/pic/orig/noutbook.png";break;
                                 case 2: echo "/pic/orig/proector.png";break;
                                 case 3: echo "/pic/orig/machine.png";break;
                                 case 4: echo "/pic/orig/marker.png";break;
->>>>>>> Stashed changes
                             }
                             ?>
                             ">
->>>>>>> Stashed changes
                         </div>
                         <div class="news_text">
-
-                            <?
-                            $value['tag'] = json_decode($value['tag'], true);
-                            foreach ($value['tag'] as $tag):?>
                                 <div class="news_tags">
-                                    <?= $tag; ?>
+                                    <?php
+                                    switch($value['typ']){
+                                        case 1: echo "Ноутбук";break;
+                                        case 2: echo "Проектор";break;
+                                        case 3: echo "Устройство замера";break;
+                                        case 4: echo "Расходный материал";break;
+                                    }
+                                    ?>
                                 </div>
-                            <? endforeach; ?>
                             <div class="news_name">
-                                <?= $value['h1']; ?>
+                                <?php echo $value['model_short']; ?>
                             </div>
                             <div class="news_date">
-                                <?= $value['pub_time']; ?>
+                                <?php echo $value['stg_name']; ?>
                             </div>
                         </div>
                     </div>
                 </a>
             </div>
-        <? endif; ?>
-    <? endforeach; ?>
-
-    <div class="soft_news_cont">
-        <a href="/article">
-            <div class="single_new">
-                <div class="single_img">
-                    <img src="/pic/orig/proector.png">
-                </div>
-                <div class="news_text">
-                    <div class="news_tags">
-                        Прожевальский Н.С.
-                    </div>
-                    <div class="news_name">
-                        Ноутбук HP 3000. Хорошая машина
-                    </div>
-                    <div class="news_date">
-                        20 минут назад
-                    </div>
-                </div>
-            </div>
-        </a>
-    </div>
-
+    <?php endforeach;?>
 </article>

@@ -1,47 +1,47 @@
 <header>
-
     <div class="nav_menu">
         <div class="nav_logo nav_edge">
-            <a href="<?php echo URL_BASE;?>/main"> плинор</a>
+            <a href="<?php echo URL_BASE;?>/main">плинор</a>
         </div>
         <div class="nav_tag">
-                <a href="<?php echo URL_BASE;?>/main" class="nav_one main">техника</a>
-                <a href="#">|</a>
-                <a href="<?php echo URL_BASE;?>/main/them/actual" class="nav_one">ноутбуки</a>
-                <a href="#">|</a>
-                <a href="<?php echo URL_BASE;?>/main/them/power" class="nav_one">проекторы</a>
-                <a href="#">|</a>
-                <a href="<?php echo URL_BASE;?>/main/them/lev" class="nav_one">измерительная техника</a>
-                <a href="#">|</a>
-                <a href="<?php echo URL_BASE;?>/main/them/games" class="nav_one">расходные материалы</a>
+                <a href="<?php echo URL_BASE;?>/main" class="nav_one <?php if($data['them']==null): echo "main"; endif;?>">техника</a>
+                <a href="<?php echo URL_BASE;?>/main/them/1" class="nav_one <?php if($data['them']==1): echo "main"; endif;?>">ноутбуки</a>
+                <a href="<?php echo URL_BASE;?>/main/them/2" class="nav_one <?php if($data['them']==2): echo "main"; endif;?>">проекторы</a>
+                <a href="<?php echo URL_BASE;?>/main/them/3" class="nav_one <?php if($data['them']==3): echo "main"; endif;?>">измерительная техника</a>
+                <a href="<?php echo URL_BASE;?>/main/them/4" class="nav_one <?php if($data['them']==4): echo "main"; endif;?>">расходные материалы</a>
         </div>
         <div class="nav_setting nav_edge">
-            <?php if(isset($_COOKIE["hash"])&&($_COOKIE["hash"]!="")):?>
-                <a href="<?php echo URL_BASE;?>/cabinet/view/id" class="nav_one">кабинет</a>
-                <a href="#">|</a>
-                <a href="<?php echo URL_BASE;?>/mail" class="nav_one">почта</a>
-                <a href="#">|</a>
-                <a href="<?php echo URL_BASE;?>/history" class="nav_one">история</a>
-                <a href="#">|</a>
+            <?php if(isset($_SESSION['RULES'])&&($_SESSION['RULES']!="")):?>
+                <a href="<?php echo URL_BASE;?>/cabinet/view/" class="nav_one">
+                    <i class="fas fa-user"></i>
+                </a>
+                <a href="<?php echo URL_BASE;?>/mail" class="nav_one">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <!--<a href="<?php echo URL_BASE;?>/history" class="nav_one">история</a>
+                <a href="#">|</a>-->
             <?php endif;?>
-                <?php if(isset($_COOKIE["hash"])&&($_COOKIE["hash"]!="")):?>
-                    <a href="<?php echo URL_BASE;?>/enter/exit" class="nav_one">выйти</a>
+                <?php if(isset($_SESSION['RULES'])&&($_SESSION['RULES']!="")):?>
+                    <a href="<?php echo URL_BASE;?>/enter/exit" class="nav_one">
+                        <i class="fas fa-sign-out-alt"></i>
+                    </a>
                 <?php else:?>
-                    <a href="<?php echo URL_BASE;?>/enter" class="nav_one">войти</a>
+                    <a href="<?php echo URL_BASE;?>/enter" class="nav_one">
+                        <i class="fas fa-sign-in-alt"></i>
+                    </a>
                 <?php endif;?>
         </div>
     </div>
-
+    <?php if(isset($_SESSION['RULES'])&&($_SESSION['RULES']>=4)):?>
     <div class="hot_news">
 
-        <div class="hot_value hot_grey nav_edge">
-            <?php if(isset($_SESSION['RULES'])&&($_SESSION['RULES']>=4)):?>
+       <div class="hot_value hot_grey nav_edge">
+           <!--    <?php if(isset($_SESSION['RULES'])&&($_SESSION['RULES']>=4)):?>
             <a  href="<?php echo URL_BASE;?>/list/order" class="hot_active">Заявки</a>
-            <?php endif;?>
+            <?php endif;?> -->
         </div>
         <div class="hot_jump">
-            <img src="/pic/web_logo/tea.gif">
-            <p>Macbook Pro 9 зарезервирован с 26.07.20 по 28.07.20 Ивановой И.И.</p>
+
         </div>
         <div class="nav_setting hot_grey nav_edge">
         <?php if(isset($_SESSION['RULES'])&&($_SESSION['RULES']>=4)):?>
@@ -52,4 +52,5 @@
             <?php endif;?>
         </div>
     </div>
+    <?php endif;?>
 </header>
