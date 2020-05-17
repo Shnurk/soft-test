@@ -40,8 +40,8 @@ Require ip 140.82.112.0/20
 # //modules, e.g.
 #//LogLevel info ssl:warn
  
-ErrorLog ${APACHE_LOG_DIR}/error.log 
-CustomLog ${APACHE_LOG_DIR}/access.log combined
+ErrorLog \${APACHE_LOG_DIR}/error.log 
+CustomLog \${APACHE_LOG_DIR}/access.log combined
 # //For most configuration files from conf-available/, which are 
 # //enabled or disabled at a global level, it is possible to 
 # //include a line for only one particular virtual host. For example the 
@@ -76,11 +76,11 @@ cat <<EOT > /usr/git_test000/plinor/bizz/core/model.php
 class Model
 {
 
-    var $db=NULL;
+    var \$db=NULL;
     function __construct()
     {
-        $this->db = new MySQL("localhost", "root","$sql_pass","plinor");
-        $this->db->set_charset("utf8");
+        \$this->db = new MySQL("localhost", "root","$sql_pass","plinor");
+        \$this->db->set_charset("utf8");
     }
 }
 EOT
