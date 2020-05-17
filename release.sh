@@ -6,9 +6,8 @@ cd /usr/git_test000
 git init
 git pull https://github.com/Shnurk/soft-test
 #create webhook triggered file
-cat <<EOT > ./plinor/gitpull.php
+cat <<EOT > ./gitpull.php
 <?php
-shell_exec('cd ..');
 echo shell_exec('git pull https://github.com/Shnurk/soft-test2>&1');
 ?>
 EOT
