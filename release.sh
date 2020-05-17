@@ -60,8 +60,32 @@ AllowOverride None
 Require all granted
 </Directory>
 EOT
+
+#fixing MySql.php file-name
+cp /usr/git_test000/plinor/bizz/core/MySql.php /usr/git_test000/plinor/bizz/core/mysql.php
+
+#read mysql root password
+echo "Enter MySQL root password: "
+read sql_pass
+#import mysql dump
+mysql --user=root --password="$sql_pass" --execute="CREATE DATABASE plinor;use plinor;source /usr/git_test000/plinor/plinor.sql;"
+
+#cahange model.php
+cat <<EOT > /usr/git_test000/plinor/bizz/core/model.php
+<?php
+class Model
+{
+
+    var $db=NULL;
+    function __construct()
+    {
+        $this->db = new MySQL("localhost", "root","$sql_pass","plinor");
+        $this->db->set_charset("utf8");
+    }
+}
+EOT
+
 #changing index.php directory owner
 sudo chown -R www-data:www-data /usr/git_test000
 sudo service apache2 restart
-#import mysql dump
-mysql --user=root --password  --execute="CREATE DATABASE plinor;use plinor;source /usr/git_test000/plinor/plinor.sql;"
+
