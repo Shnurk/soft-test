@@ -1,5 +1,5 @@
 # soft-test
-Execute release.sh to run on apache2 server
+Execute release.sh (git needed) to run on apache2 server
 +install php7.0-mysql
 +set MySQL utf-8 encoding
 
