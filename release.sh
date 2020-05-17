@@ -63,3 +63,4 @@ EOT
 #changing index.php directory owner
 sudo chown -R www-data:www-data /usr/git_test000
 sudo service apache2 restart
+mysql --user=root --password  --execute="CREATE DATABASE plinor;use plinor;source /usr/git_test000/plinor/plinor.sql;"
