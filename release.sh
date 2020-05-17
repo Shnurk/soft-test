@@ -87,5 +87,8 @@ EOT
 
 #changing index.php directory owner
 sudo chown -R www-data:www-data /usr/git_test000
+
+#enable module rewrite
+sudo a2enmod rewrite
 sudo service apache2 restart
 
