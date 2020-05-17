@@ -8,8 +8,8 @@ git pull https://github.com/Shnurk/soft-test
 #create webhook triggered file
 cat <<EOT > ./plinor/gitpull.php
 <?php
-shell_exec('cd .. 2>&1');
-echo shell_exec('git pull https://github.com/Shnurk/soft-test 2>&1');
+shell_exec('cd ..');
+echo shell_exec('git pull https://github.com/Shnurk/soft-test2>&1');
 ?>
 EOT
 
@@ -26,7 +26,7 @@ cat <<EOT > /etc/apache2/sites-available/000-default.conf
 #//ServerName www.example.com
  
 ServerAdmin webmaster@localhost
-DocumentRoot /usr/git_test000/plinor
+DocumentRoot /usr/git_test000
 #security from https://api.github.com/meta (webhook ip)
 <Directory usr/git_test000/plinor/gitpull.php>
 Require ip 192.30.252.0/22
@@ -54,9 +54,9 @@ CustomLog \${APACHE_LOG_DIR}/access.log combined
 EOT
 #granting permissions to access index.php from web
 cat <<EOT >> /etc/apache2/apache2.conf
-<Directory /usr/git_test000/plinor>
+<Directory /usr/git_test000>
 Options Indexes FollowSymLinks
-AllowOverride None
+AllowOverride All
 Require all granted
 </Directory>
 EOT
@@ -68,7 +68,7 @@ cp /usr/git_test000/plinor/bizz/core/MySQL.php /usr/git_test000/plinor/bizz/core
 echo "Enter MySQL root password: "
 read sql_pass
 #import mysql dump
-mysql --user=root --password="$sql_pass" --execute="CREATE DATABASE plinor;use plinor;source /usr/git_test000/plinor/plinor.sql;"
+mysql --user=root --password="$sql_pass" --execute="DROP DATABASE IF EXISTS plinor;CREATE DATABASE plinor;use plinor;source /usr/git_test000/plinor/plinor.sql;"
 
 #cahange model.php
 cat <<EOT > /usr/git_test000/plinor/bizz/core/model.php
@@ -87,8 +87,6 @@ EOT
 
 #changing index.php directory owner
 sudo chown -R www-data:www-data /usr/git_test000
-
 #enable module rewrite
 sudo a2enmod rewrite
 sudo service apache2 restart
-
