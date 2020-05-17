@@ -62,7 +62,7 @@ Require all granted
 EOT
 
 #fixing MySql.php file-name
-cp /usr/git_test000/plinor/bizz/core/MySql.php /usr/git_test000/plinor/bizz/core/mysql.php
+cp /usr/git_test000/plinor/bizz/core/MySQL.php /usr/git_test000/plinor/bizz/core/mysql.php
 
 #read mysql root password
 echo "Enter MySQL root password: "
