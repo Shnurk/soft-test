@@ -21,7 +21,7 @@ class Controller_Article extends Controller
     }
 
     function action_com_change(){
-        if($_SESSION['RULES']<3)
+        if($_SESSION['RULES']<4)
             header("location:".URL_BASE."/404");
         else {
             $this->model_list->update_data('technic', $this->way[START_POSITION + 2]);
@@ -30,7 +30,7 @@ class Controller_Article extends Controller
     }
 
     function action_change(){
-        if($_SESSION['RULES']<3)
+        if($_SESSION['RULES']<4)
             header("location:".URL_BASE."/404");
         else {
             $data = $this->model_main->model_load(0, $this->way[START_POSITION + 2]);

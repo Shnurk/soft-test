@@ -34,12 +34,6 @@
                     case 1: echo "Архивный";break;
                 }
                 ?></div>
-            <div class="list_reserve list_slot"><?php
-                switch($value[9]){
-                    case 0: echo "Доступен";break;
-                    case 1: echo "Недоступен";break;
-                }
-                ?></div>
             <div class="list_status list_slot"><?php
                 switch($value[12]){
                     case 1: echo "Ноутбук";break;

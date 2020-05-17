@@ -14,7 +14,7 @@
     <div class="artic_top">
     <h1> <?php echo $value['model_short'];?></h1>
         <div>
-            <?php if(isset($_SESSION['RULES'])&&($_SESSION['RULES']>=3)):?>
+            <?php if(isset($_SESSION['RULES'])&&($_SESSION['RULES']>=4)):?>
         <a href="<?php echo URL_BASE;?>/article/change/<?php echo $value['id'];?>">
             <img src="<?php echo URL_BASE;?>/pic/orig/pencil.png">
         </a>

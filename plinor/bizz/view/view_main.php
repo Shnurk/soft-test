@@ -42,5 +42,5 @@
                     </div>
                 </a>
             </div>
-    <?php endforeach; ?>
+    <?php endforeach;?>
 </article>

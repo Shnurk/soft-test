@@ -36,7 +36,6 @@ class Model_user_access extends Model
                 $err[1] = "Добро пожаловать на портал";
                    $_SESSION['RULES']=$result[7];
              header("location: ".URL_BASE."/main");
-
             } else {
                 $err[0]=1;
                 $err[1] = "Ошибка! Логин или пароль введены не верно.";

@@ -13,8 +13,12 @@ class Controller_Cabinet extends Controller{
         $data['settings']=0;
         if(isset($this->way[START_POSITION + 2])&&($_SESSION['RULES']>=3))
             $object=$this->way[START_POSITION + 2];
-        else
+        else{
+         if(isset($_SESSION['RULES']))
             $object=null;
+            else
+            header("location:".URL_BASE."/404");
+        }
         $data['person']=$this->model_cabinet->find_person($object);
         $this->view->generate('view_cabinet.php', 'view_form.php', $data);
     }
@@ -23,16 +27,28 @@ class Controller_Cabinet extends Controller{
         $data['settings']=1;
         if(isset($this->way[START_POSITION + 2])&&($_SESSION['RULES']>=4))
             $object=$this->way[START_POSITION + 2];
-        else
+        else{
+         if(isset($_SESSION['RULES']))
             $object=null;
+            else
+            header("location:".URL_BASE."/404");
+        }
         $data['profile']=$this->model_cabinet->find_person(null);
         $data['person']=$this->model_cabinet->find_person($object);
         $this->view->generate('view_cabinet.php', 'view_form.php', $data);
     }
 
     function action_save(){
-        if($_SESSION['RULES']<4)
-            header("location:".URL_BASE."/404");
+
+
+        if($_SESSION['RULES']<4){
+            $data['profile']=$this->model_cabinet->find_person(null);
+            if($this->way[START_POSITION + 2]==$data['profile'][0]){
+                $this->model_cabinet->save_person($this->way[START_POSITION + 2]);
+            }
+            else
+                header("location:".URL_BASE."/404");
+        }
         else {
             $this->model_cabinet->save_person($this->way[START_POSITION + 2]);
         }

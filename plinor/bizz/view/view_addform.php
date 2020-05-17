@@ -119,18 +119,15 @@
         </div>
             <?php ;break;
             endswitch;?>
-
+</article>
     <div class="add_pult">
         <?php if($data['page']!='order'):?>
             <div class="ent_field">
                 <input type="button" value="Добавить новый элемент" class="add_button" onclick="new_form('<?php echo$data['page']?>')">
-
             </div>
             <div class="ent_field">
                 <input type="submit" name="submit" value="Зарегистрировать" class="add_button">
             </div>
         <?php endif;?>
     </div>
-</article>
-
 </form>

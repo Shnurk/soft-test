@@ -82,7 +82,7 @@
             <i id = "cab_icon" class="fas fa-save"></i>
             <input type="submit" name="submit" value="Сохранить изменения">
         </div>
-        <a href="<?php echo URL_BASE;?>/cabinet/view"><div class="cab_full row">
+        <a href="<?php echo URL_BASE."/cabinet/view/".$data['person'][0];?>"><div class="cab_full row">
                 <i id = "cab_icon" class="fas fa-arrow-alt-circle-left"></i>
             <p>Отмена</p>
             </div></a>

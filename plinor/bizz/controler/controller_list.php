@@ -23,7 +23,7 @@ class Controller_List extends Controller
     }
 
     function action_tech(){
-        if($_SESSION['RULES']<4){
+        if($_SESSION['RULES']<3){
             header("location:".URL_BASE."/404");
       }
         else{
@@ -34,7 +34,7 @@ class Controller_List extends Controller
     }
 
     function action_user(){
-        if($_SESSION['RULES']<4)
+        if($_SESSION['RULES']<3)
             header("location:".URL_BASE."/404");
         else{
         $page="user";
@@ -44,7 +44,7 @@ class Controller_List extends Controller
     }
 
     function action_order(){
-        if($_SESSION['RULES']<4)
+        if($_SESSION['RULES']<3)
             header("location:".URL_BASE."/404");
         else{
         $page="order";
@@ -55,13 +55,13 @@ class Controller_List extends Controller
 
     function action_index($table,$page)
     {
-        if($_SESSION['RULES']<4)
+        if($_SESSION['RULES']<3)
             header("location:".URL_BASE."/404");
         else{
         $way = $this->way;
         $option = 'list';
         if (isset($way[4])) {
-            if ($way[4] == 'add')
+            if (($way[4] == 'add')&&($_SESSION['RULES']>3))
                 $option = 'add';
         }
         $data['data']=$this->model_list->take_data($table,"");

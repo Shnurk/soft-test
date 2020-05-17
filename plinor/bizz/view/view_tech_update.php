@@ -16,7 +16,7 @@
     <h1> <?php echo $value['model_short'];?></h1>
         <div>
             <?php if(isset($_SESSION['RULES'])&&($_SESSION['RULES']>=3)):?>
-            <input type="image" src="<?php echo URL_BASE;?>/pic/orig/pencil.png">
+            <input type="image" src="<?php echo URL_BASE;?>/pic/orig/plus.png">
             <?php endif;?>
          <?php if(isset($_SESSION['RULES'])&&($_SESSION['RULES']>=4)):?>
             <a href="<?php echo URL_BASE;?>/article/index/<?php echo $value['id'];?>">
@@ -51,10 +51,10 @@
                 <td>Тип техники:</td>
                 <td>
                     <select class="artic_input" name="type">
-                        <option value="1" <?php if($value['typ']==0): echo 'selected'; endif;?>>Ноутбук</option>
-                        <option value="2" <?php if($value['typ']==0): echo 'selected'; endif;?>>Проектор</option>
-                        <option value="3" <?php if($value['typ']==0): echo 'selected'; endif;?>>Устройство замера</option>
-                        <option value="4" <?php if($value['typ']==0): echo 'selected'; endif;?>>Расходный материал</option>
+                        <option value="1" <?php if($value['typ']==1): echo 'selected'; endif;?>>Ноутбук</option>
+                        <option value="2" <?php if($value['typ']==2): echo 'selected'; endif;?>>Проектор</option>
+                        <option value="3" <?php if($value['typ']==3): echo 'selected'; endif;?>>Устройство замера</option>
+                        <option value="4" <?php if($value['typ']==4): echo 'selected'; endif;?>>Расходный материал</option>
                     </select>
                 </td>
             </tr>
