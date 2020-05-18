@@ -22,7 +22,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Dyno" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunManager">
     <configuration name="pagesTest" type="TestNG" temporary="true" nameIsGenerated="true">
@@ -82,41 +82,33 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="137" y="20" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1580672500952">
+    <state x="463" y="120" key="FileChooserDialogImpl" timestamp="1585307635924">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="137" y="20" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1580672500952" />
-    <state x="392" y="12" key="#pagesTest" timestamp="1580672418579">
+    <state x="463" y="120" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1585307635924" />
+    <state width="1108" height="190" key="GridCell.Tab.0.bottom" timestamp="1589810794761">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="392" y="12" key="#pagesTest/0.0.1366.728@0.0.1366.728" timestamp="1580672418579" />
-    <state x="463" y="120" key="FileChooserDialogImpl" timestamp="1582788994640">
+    <state width="1108" height="190" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1589810794761" />
+    <state width="1108" height="190" key="GridCell.Tab.0.center" timestamp="1589810794761">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="120" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1582788994640" />
-    <state width="1024" height="211" key="GridCell.Tab.0.bottom" timestamp="1582801492228">
+    <state width="1108" height="190" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1589810794761" />
+    <state width="1108" height="190" key="GridCell.Tab.0.left" timestamp="1589810794761">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1024" height="211" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1582801492228" />
-    <state width="1024" height="211" key="GridCell.Tab.0.center" timestamp="1582801492228">
+    <state width="1108" height="190" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1589810794761" />
+    <state width="1108" height="190" key="GridCell.Tab.0.right" timestamp="1589810794761">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1024" height="211" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1582801492228" />
-    <state width="1024" height="211" key="GridCell.Tab.0.left" timestamp="1582801492228">
+    <state width="1108" height="190" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1589810794761" />
+    <state x="379" y="189" key="com.intellij.ide.util.TipDialog" timestamp="1589798874535">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1024" height="211" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1582801492228" />
-    <state width="1024" height="211" key="GridCell.Tab.0.right" timestamp="1582801492228">
+    <state x="379" y="189" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1589798874535" />
+    <state x="379" y="0" width="607" height="728" key="find.popup" timestamp="1589799012724">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1024" height="211" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1582801492228" />
-    <state x="379" y="189" key="com.intellij.ide.util.TipDialog" timestamp="1583085461433">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="379" y="189" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1583085461433" />
-    <state x="65" y="60" key="new project wizard" timestamp="1581080709160">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="65" y="60" key="new project wizard/0.0.1366.728@0.0.1366.728" timestamp="1581080709160" />
+    <state x="379" y="0" width="607" height="728" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1589799012724" />
   </component>
 </project>

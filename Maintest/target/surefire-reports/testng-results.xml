@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Surefire suite" duration-ms="46619" started-at="2020-02-16T17:43:36 MSK" finished-at="2020-02-16T17:44:23 MSK">
+  <suite name="Surefire suite" duration-ms="78916" started-at="2020-03-02T12:59:43 MSK" finished-at="2020-03-02T13:01:02 MSK">
     <groups>
     </groups>
-    <test name="Surefire test" duration-ms="46619" started-at="2020-02-16T17:43:36 MSK" finished-at="2020-02-16T17:44:23 MSK">
+    <test name="Surefire test" duration-ms="78916" started-at="2020-03-02T12:59:43 MSK" finished-at="2020-03-02T13:01:02 MSK">
       <class name="Plinor.pagesTest">
-        <test-method status="PASS" signature="errorassert()[pri:0, instance:Plinor.pagesTest@a86356]" name="errorassert" duration-ms="46560" started-at="2020-02-16T17:43:36 MSK" finished-at="2020-02-16T17:44:23 MSK">
+        <test-method status="PASS" signature="errorassert()[pri:0, instance:Plinor.pagesTest@a86356]" name="errorassert" duration-ms="78854" started-at="2020-03-02T12:59:43 MSK" finished-at="2020-03-02T13:01:02 MSK">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- errorassert -->
