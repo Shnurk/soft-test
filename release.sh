@@ -27,7 +27,7 @@ cat <<EOT > /etc/apache2/sites-available/000-default.conf
 ServerAdmin webmaster@localhost
 DocumentRoot /usr/git_test000
 #security from https://api.github.com/meta (webhook ip)
-<Directory usr/git_test000/plinor/gitpull.php>
+<Directory usr/git_test000/gitpull.php>
 Require ip 192.30.252.0/22
 Require ip 185.199.108.0/22
 Require ip 140.82.112.0/20
