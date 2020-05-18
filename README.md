@@ -1,6 +1,7 @@
 # soft-test
 Execute release.sh (git needed) to run on apache2 server
 +install php7.0-mysql
++install php7.0-mbstring
 +set MySQL utf-8 encoding
 
 +change root password: soft-test/plinor/bizz/core/model.php (already done in bash script)
